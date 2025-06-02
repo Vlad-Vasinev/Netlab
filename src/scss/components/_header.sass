@@ -1,0 +1,423 @@
+:root
+  +aProp(--headerHeight, 171)
+  +r($sm)
+    --headerHeight: 66px
+header
+  width: 100%
+  // +aProp(margin-bottom, 70)
+  position: fixed
+  top: 0
+  z-index: 1
+  width: 100%
+  height: aCalc(171)
+  overflow: hidden
+  +r($sm)
+    // margin-bottom: 41px
+    height: 66px
+    height: var(--headerHeight)
+  .header-inner
+    padding: aCalc(40) aCalc(120)
+    top: 0
+    left: 0
+    position: fixed
+    width: 100%
+    display: grid
+    grid-auto-flow: column
+    z-index: 10
+    grid-template-columns: 1fr
+    +r($sm)
+      padding: 10px 16px 16px
+      align-items: center
+      background-color: $Black
+      &::before,
+      &::after
+        position: absolute
+        top: 3.5px
+        overflow: hidden
+        width: 35.75px
+        height: 87px
+        content: ''
+        display: block
+        background-color: $Black
+
+        transition: transform 0.1s
+        transform: translateY(-50%)
+
+      &::before
+        left: 0
+        clip-path: path('M35.75,0V56.68C7.58,57,.09,78,.09,87h-.09V0H35.75Z')
+      &::after
+        right: 0
+        clip-path: path('M35.75,0V87h-.09c0-9-7.49-30-35.66-30.32V0H35.75Z')
+
+    .logo
+      position: relative
+      display: block
+      transition: transform 0.4s 0.01s, opacity 0.4s 0.01s, visibility 0s 0s
+      +rmin($sm1)
+        grid-row: 1/2
+        grid-column: 1/2
+        margin: 0
+        align-self: flex-start
+        justify-self: flex-start
+      +r($sm)
+        z-index: 3
+        // order: 2
+      .logoTop
+        height: auto
+        width: aCalc(135)
+        margin-top: aCalc(6)
+        margin-bottom: aCalc(12)
+        display: block
+        +r($sm)
+          width: 130px
+          margin: 0
+        img
+
+      .logoBottom
+        position: absolute
+        max-width: unset
+        object-fit: contain
+        width: aCalc(118)
+        height: auto
+        // +aProp(height, 80)
+        top: 100%
+        visibility: visible
+        transform: translateY(0)
+        opacity: 1
+        transition: transform 0.4s 0.01s, opacity 0.4s 0.01s, visibility 0s 0s
+        +r($sm)
+          width: 100%
+          display: none
+        img
+          +r($sm)
+            margin: 0 auto
+    .side-button
+      margin-right: 16px
+    .hamburger-mobile
+      --ham-w: 65%
+      --ham-h: 1px
+      --ham-gap: 10px
+      z-index: 3
+      display: block
+      position: relative
+      width: 40px
+      height: 40px
+      +rmin($sm1)
+        display: none
+      .hamburger-inner
+        display: block
+        top: calc( 50% - var(--ham-h) / 2  )
+        left: 17.5%
+        left: calc( (100% - var(--ham-w)) / 2 )
+        width: var(--ham-w )
+        height: 1px
+        background-color: #fff
+        position: absolute
+        transition-property: transform
+        transition-duration: 0.15s
+        transition-timing-function: ease
+        &::before, &::after
+          // width: 30px
+          width: 100%
+          height: 1px
+          background-color: #fff
+          border-radius: 0px
+          position: absolute
+          transition-property: transform
+          transition-duration: 0.15s
+          transition-timing-function: ease
+        &::before, &::after
+          content: ""
+          display: block
+        &::before
+          top: calc( var(--ham-gap) - 100%)
+        &::after
+          bottom: calc( var(--ham-gap) - 100%)
+      .hamburger-inner
+        transition-duration: 0.1s
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+        &::before
+          transition: top 0.1s 0.14s ease, opacity 0.1s ease
+        &::after
+          transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+      &.is-active
+        .hamburger-inner
+          transform: rotate(45deg)
+          transition-delay: 0.14s
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+          &::before
+            top: 0
+            opacity: 0
+            transition: top 0.1s ease, opacity 0.1s 0.14s ease
+          &::after
+            bottom: 0
+            transform: rotate(-90deg)
+            transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+  .header-menu
+    margin-left: auto
+    transition: height 0.4s
+    +rmin($sm1)
+      grid-row: 1/2
+      grid-column: 1/2
+      margin: 0
+      align-self: center
+      justify-self: center
+      height: aCalc(91)
+    +r($sm)
+      height: min-content
+      display: flex
+      flex-direction: column
+      background-color: $Black
+      visibility: hidden
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      transform: translateX(-100%)
+      transition: transform 0.4s 0s ease, visibility 0s 0.41s
+      padding: 0 15px 24px
+    ul
+      margin: 0
+      background: rgba(32, 32, 32, 0.75)
+      backdrop-filter: blur(4px)
+      border-radius: aCalc(24)
+      display: flex
+      padding: aCalc(0) aCalc(20)
+      height: 100%
+      +r($sm)
+        height: auto
+        background: transparent
+        backdrop-filter: none
+        border-radius: 0
+        gap: 10px
+        flex-direction: column
+        padding: 0
+        margin-top: 94px
+      li
+        a
+          height: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          position: relative
+          padding: aCalc(0) aCalc(20)
+          
+          font-size: aCalc(16)
+          line-height: aCalc(21)
+          +r($sm)
+            justify-content: flex-start
+            font-size: 33px
+            line-height: 39px
+          p
+            font-size: inherit
+            line-height: inherit
+          &::before
+            content: ''
+            position: absolute
+            width: aCalc(8)
+            height: aCalc(8)
+            background-color: #11E2C7
+            top: aCalc(14)
+            border-radius: 50%
+            left: 50%
+            transform-origin: center
+            transform: translateX(-50%) scale(0)
+            transition: transform 0.4s
+            +r($sm)
+              width: 8px
+              height: 8px
+              top: 14px
+
+          &:hover, &._active
+            +rmin($sm1)
+              &::before
+                transform: translateX(-50%) scale(1)
+                // opacity: 1
+    &.mobile-opened
+      transition: transform 0.4s 0.01s ease, visibility 0s 0s
+      visibility: visible
+      transform: translate(0)
+    &__banner
+      // height: 120px
+      width: 100%
+      background-color: #1A1A1A
+      border-radius: 16px
+      display: grid
+      grid-template-columns: 1fr auto
+      grid-template-rows: repeat(3, auto)
+      padding-left: 20px
+      margin: 30px 0
+      .h3, .h5
+        color: #fff
+      .h3
+        margin-top: 20px
+      .h4
+        margin-top: 4px
+      .h5
+        margin-top: 22px
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        gap: 6px
+
+      svg
+        height: 18px
+        width: auto
+      img
+        border-bottom-right-radius: inherit
+        grid-column: 2/3
+        grid-row: 1/-1
+        height: 111px
+        width: auto
+        align-self: flex-end
+      +rmin($sm1)
+        display: none
+    &__footer
+      display: grid
+      grid-template-columns: auto auto
+      grid-template-rows: auto auto
+      gap: 16px
+      margin-top: auto
+      +rmin($sm1)
+        display: none
+      a:nth-child(2)
+        justify-self: flex-end
+      a:nth-child(n+3)
+        grid-column: 1/-1
+
+  .header-side-buttons
+    position: fixed
+    display: flex
+    transition: height 0.4s
+    +rmin($sm1)
+      right: 0
+      gap: aCalc(6)
+      margin-top: aCalc(40)
+      margin-right: aCalc(120)
+      height: aCalc(91)
+      z-index: 11
+    +r($sm)
+      display: none
+
+  .side-button
+    background-color: rgba(32, 32, 32, 0.75)
+    backdrop-filter: blur(4px)
+    border-radius: aCalc(24)
+    display: flex
+    width: aCalc(200)
+    height: 100%
+    padding: aCalc(16)
+    // justify-content: space-between
+    transition: padding 0.4s, background-color 0.4s, height 0.4s
+
+    +r($sm)
+      border-radius: 16px
+      // width: 200px
+      flex-shrink: 1.5
+      width: 50%
+      padding: 12px
+
+    &::before
+      background-color: rgba(48, 48, 48, 0.75)
+    p
+      font-size: aCalc(16)
+      line-height: aCalc(19)
+      flex: 0 0 auto
+      // align-self: flex-start
+      width: max-content
+      transition: transform 0.4s 0s, margin 0.4s, color .3s
+      margin-top: 0
+      margin-bottom: auto
+      text-align: left
+
+    &-icon
+      flex: 0 0 auto
+      object-fit: cover
+      border-radius: 50%
+      aspect-ratio: 1 / 1
+      width: aCalc(50)
+      margin-bottom: 0
+      margin-top: auto
+      margin-left: auto
+      // align-self: flex-end
+
+      transition: margin 0.4s
+      height: auto
+      +r($sm)
+        width: 40px
+      svg, img
+        border-radius: 50%
+        width: 100%
+        height: 100%
+        transition: transform 0.3s
+        [fill]
+          transition: fill 0.4s
+        // object-fit: cover
+    &.hovered
+      p
+        transform: translateX(10%)
+    &.hovered &-icon svg
+      transform: rotateZ(43.35deg)
+
+  .side-button.side-button_mini-mobile
+    width: auto
+    padding: 4px 8px
+    display: grid
+    grid-template-columns: auto auto
+    grid-auto-flow: column
+    gap: 10px
+    border-radius: 12px
+    align-items: center
+    +rmin($sm)
+      display: none
+    p
+      font-size: 11px
+      line-height: 14px
+      margin: 0
+      // grid-column: 2/3
+    .side-button-icon
+      height: 32px
+      min-width: 32px
+      width: auto
+      grid-column: 1/2
+
+  &.scrolled
+    +rmin($sm1)
+      .header-inner
+        .logo
+          transform: translateY(aCalc(15))
+          
+          .logoBottom
+            transition: transform 0.4s 0s, opacity 0.4s 0s, visibility 0s 0.41s
+            transform: translateY(aCalc(-7))
+            visibility: hidden
+            opacity: 0
+        .header-menu
+          height: aCalc(66)
+
+      .header-side-buttons
+        height: aCalc(66)
+
+        .side-button
+          padding: aCalc(8) aCalc(16)
+          height: aCalc(66)
+
+          p
+            transform: translateY(aCalc(8))
+  &.scrolled
+    +r($sm)
+      .header-inner
+        &::before,
+        &::after
+          transform: translateY(0)
+
+.side-button.sas
+  padding: aCalc(8) aCalc(16)
+  height: aCalc(66)
+
+  p
+    
+    transform: translateY(aCalc(8))

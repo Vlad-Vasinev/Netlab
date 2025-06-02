@@ -1,0 +1,21 @@
+
+.nbl-technologies 
+  display: flex
+  justify-content: space-between
+  padding-right: aCalc(157)
+  +r($sm)
+    flex-direction: column
+    gap: 40px
+  &__el 
+    width: aCalc(301)
+    display: flex
+    flex-direction: column
+    gap: aCalc(16)
+    +r($sm)
+      gap: 8px
+      width: unset
+  &__body 
+    .h6 
+      color: #747474
+    span.h6 
+      color: #ffffff

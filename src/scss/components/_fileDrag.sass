@@ -1,0 +1,185 @@
+.drag-file
+
+  position: relative
+
+.drag-file.has-advanced-upload
+  border: 2px dashed #ebebeb00
+
+  width: 100%
+  +aProp(border-radius, 24)
+
+  transition: border .15s ease-in-out, background-color .15s linear, width .4s ease, padding .15s .2s ease
+  +r($sm)
+    border-radius: 24px
+
+.drag-file.is-dragover
+  border-color: #ebebeb
+  +aProp(padding-top, 20)
+  +aProp(padding-bottom, 20)
+  +aProp(padding-left, 20)
+  width: 100%
+  +r($sm)
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 20px
+
+.drag-file__input
+  display: flex
+  align-items: center
+.drag-file__dragndrop,
+.drag-file__icon
+
+  display: none
+
+.drag-file.has-advanced-upload .drag-file__dragndrop
+
+  display: inline
+
+.drag-file.has-advanced-upload .drag-file__icon
+
+.drag-file.is-uploading .drag-file__input,
+.drag-file.is-success .drag-file__input,
+.drag-file.is-error .drag-file__input
+  
+  visibility: hidden
+
+.drag-file__message
+  position: relative
+  white-space: nowrap
+  display: block
+  // +aProp(top, 10)
+  // left: 100%
+  +aProp(margin-left, 10)
+  +aProp(font-size, 16)
+  +aProp(line-height, 22)
+
+.drag-file__dismiss-icon
+  display: none
+  +aProp(width, 22)
+  +aProp(height, 22)
+  +r($sm)
+    width: 22px
+    height: 22px
+
+
+.drag-file.file-attached 
+  .drag-file__dismiss-icon
+    display: block
+    +aProp(margin-left, 10)
+    +r($sm)
+      margin-left: 10px
+
+.drag-file__success
+
+  -webkit-animation: appear-from-inside .25s ease-in-out
+  animation: appear-from-inside .25s ease-in-out
+
+  @keyframes appear-from-inside
+    from
+      transform: translateY( -50% ) scale( 0 )
+    75%
+      transform: translateY( -50% ) scale( 1.1 )
+    to
+      transform: translateY( -50% ) scale( 1 )
+
+.drag-file__restarts
+  font-weight: 700
+
+.drag-file__restart:focus,
+.drag-file__restart:hover
+
+  color: #808080
+
+.drag-file__file
+
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+.drag-file__file + label
+  display: flex
+  align-items: center
+
+  text-overflow: ellipsis
+  white-space: nowrap
+  cursor: pointer
+
+  width: fit-content
+  font-weight: 400
+  overflow: hidden
+  border: 1px solid $Black
+  +aPadding(4, 16, 4, 4)
+  +aProp(border-radius, 24)
+  +aProp(font-size, 16)
+  +aProp(line-height, 22)
+  +r($sm)
+    padding: 4px 16px 4px 4px
+    border-radius: 24px
+    font-size: 16px
+    line-height: 22px
+  span
+    display: block
+
+  svg:first-child
+    +aProp(width, 32)
+    +aProp(height, 32)
+    +aProp(margin-right, 10)
+    +r($sm)
+      width: 32px
+      height: 32px
+      margin-right: 10px
+
+.drag-file.file-attached .drag-file__file + label
+  background-color: $Black 
+  span
+    color: #fff
+  svg:first-child
+    path[stroke="#fff"] 
+      stroke: $Black
+    circle[fill="$Black"]
+      fill: #fff
+
+
+  
+.drag-file__file + label:active
+  transform: scale(0.98)
+
+.drag-file__file + label:hover strong,
+.drag-file__file:focus + label strong,
+.drag-file__file.focus-visible + label strong
+
+.drag-file__file:focus + label,
+.drag-file__file.focus-visible + label
+  transform: scale(0.98)
+
+  .drag-file__file + label *
+
+    /* pointer-events: none; */ /* in case of FastClick lib use */
+
+.no-js .drag-file__file + label
+
+  display: none
+
+.no-js .drag-file__button
+
+  display: block
+
+.drag-file__button
+
+  font-weight: 700
+  color: #e5edf1
+  background-color: #39bfd3
+  display: none
+  padding: 8px 16px
+  margin: 40px auto 0
+  +r($sm)
+    padding: 8px 16px
+    margin: 40px auto 0
+
+  .drag-file__button:hover,
+  .drag-file__button:focus
+
+    background-color: #0f3c4b

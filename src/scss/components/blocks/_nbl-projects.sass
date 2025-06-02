@@ -1,0 +1,87 @@
+
+.nbl-projects 
+  margin-bottom: aCalc(82)
+  +r($sm)
+    margin-bottom: 40px
+  &__wrapper 
+    display: flex
+    flex-direction: column
+    gap: aCalc(80)
+    +r($sm)
+      gap: 40px
+  .nbl-project
+    position: relative
+    &__mesh
+      display: flex
+      gap: aCalc(56)
+      position: absolute
+      left: aCalc(16)
+      top: aCalc(16)
+      +r($sm)
+        left: 8px
+        gap: 30px
+        top: 8px
+    &__icons 
+      display: flex
+      gap: aCalc(6)
+      +r($sm)
+        gap: 6px
+    &__img 
+      position: relative
+      height: aCalc(736)
+      width: 100%
+      margin-bottom: aCalc(16)
+      border-radius: aCalc(4)
+      //overflow: hidden
+      +r($sm)
+        height: 220px
+        margin-bottom: 12px
+        border-radius: 4px
+      &-icon 
+        position: relative
+        overflow: hidden
+        cursor: pointer
+        svg, img 
+          width: aCalc(40)
+          height: aCalc(40)
+          +r($sm)
+            width: 30px
+            height: 30px
+        &:hover 
+          overflow: unset
+          .nbl-clipPopup.dp
+            opacity: 1
+            transform: translateY(0)
+      img, video 
+        width: 100% 
+        height: 100% 
+        object-fit: cover
+  &__small 
+    display: grid 
+    grid-template-columns: repeat(2, 1fr)
+    gap: aCalc(16)
+    +r($sm)
+      display: flex
+      flex-direction: column
+      gap: 40px
+    .nbl-project__img
+      height: aCalc(498)
+      +r($sm)
+        height: 220px
+
+.nbl-project
+  &__img 
+    height: aCalc(792)
+    margin-bottom: aCalc(16)
+    img, video 
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__info 
+    display: flex
+    flex-direction: column
+    gap: aCalc(2)
+    +r($sm)
+      gap: 2px
+    .h7 
+      color: #484848

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#080808">
+    <title>NetLab</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js?onload=startFunc&amp;render=explicit" async defer></script><meta property="og:type" content="article">
+<meta property="og:title" content="Netlab">
+<meta property="og:description" content="Разработка сайтов и приложений">
+<meta property="og:url" content="https://netlab-com.ru">
+<meta property="og:image" content="img/og.png"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://netlab-com.ru",
+    "name": "NetLab",
+    "description": "Описание",
+    "email": "info@netlab.pro",
+    "telephone": "8-495-641-61-55",
+    "location": "Красный Октябрь",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Берсеневский переулок 2 строение 1, офис 312",
+      "addressLocality": "Москва",
+      "addressCountry": "RU",
+      "addressRegion": "Московская область"
+    }
+  }
+</script>
+
+  </head>
+  <body>
+    <div class="nbl-fixedHeader"> 
+      <div class="nbl-header__logo">
+         <svg class="" width="160" height="81" viewBox="0 0 160 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M79.5361 40.4473L0 81V40.5254L79.5361 0V40.4473ZM159.069 40.4473L79.5361 81V40.5254L159.069 0V40.4473Z" fill="white"/>
+</svg>
+      </div>
+      <div class="nbl-header__link _deskNo"> 
+        <div class="btn-2">Text to Telegram</div>
+      </div>
+      <div class="animated-menu _mobNo">
+        <div class="animated-menu__body">
+          <div class="animated-menu__top">
+            <div class="nbl-burger">
+               <div class="burger-item burger-first"></div>
+<div class="burger-item burger-second"></div>
+<div class="burger-item burger-third"></div>
+            </div>
+            <div class="btn-1 nbl-textAnimation">Main </div>
+          </div>
+          <div class="animated-menu__body-el"> <a class="btn-1 animated-menu__link nbl-textAnimation" href="#">Main</a></div>
+          <div class="animated-menu__body-el"><a class="btn-1 animated-menu__link nbl-textAnimation" href="#">Portfolio</a></div>
+          <div class="animated-menu__body-el"><a class="btn-1 animated-menu__link nbl-textAnimation" href="#">About us</a></div>
+          <div class="animated-menu__body-el"> <a class="btn-1 animated-menu__link nbl-textAnimation" href="#">Services</a></div>
+          <div class="animated-menu__body-el"><a class="btn-1 animated-menu__link nbl-textAnimation" href="#">Contacts</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="animated-menu" js-modal-open data-modal-name="menuModal">
+      <div class="nbl-burger">
+         <div></div>
+<div></div>
+<div></div>
+      </div>
+      <div class="btn-1">Main</div>
+    </div>
+    <div class="nbl-header"> 
+      <div class="nbl-header__logo">
+         <svg width="301" height="144" viewBox="0 0 301 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M176.405 124.785L138.895 143.899V73.2171L160.324 62.2979V115.996L176.405 107.801V124.785Z" fill="white"/>
+<path d="M241.682 91.5301L219.536 102.815L217.947 94.6505L203.507 102.014L201.76 111.872L179.614 123.156L198.675 42.7614L224.875 29.4084L241.678 91.5301H241.682ZM215.425 80.787L214.039 73.2479C214.004 73.2347 213.933 72.8606 213.832 72.1168C213.762 71.483 213.401 69.0096 212.754 64.7009C212.684 64.2212 212.595 63.5478 212.494 62.7028C212.393 61.8578 212.257 60.7883 212.085 59.5076L211.416 53.1612C211.346 53.839 211.253 54.6048 211.134 55.4586C211.011 56.3124 210.883 57.2498 210.747 58.2665C210.509 60.2822 210.338 61.6774 210.236 62.4608C210.135 63.2486 210.065 63.7283 210.03 63.8955L208.538 73.2127L206.381 85.3906L215.421 80.7914L215.425 80.787Z" fill="white"/>
+<path d="M246.845 88.8983V18.212L271.764 5.51478C281.082 0.770381 287.987 -0.915245 292.472 0.462303C297.027 1.88826 299.302 5.5808 299.302 11.5311C299.302 20.3817 294.368 27.692 284.506 33.4442C290.126 31.3141 294.241 30.8652 296.864 32.0931C299.483 33.321 300.799 36.349 300.799 41.1726C300.799 47.2461 298.589 53.2492 294.17 59.1951C289.783 65.1543 284.013 69.9603 276.856 73.6088L246.85 88.8895L246.845 88.8983ZM268.274 34.7646L269.713 34.034C272.284 32.7313 274.308 31.1557 275.8 29.3336C277.288 27.5027 278.036 25.6323 278.036 23.709C278.036 19.6203 275.519 18.8545 270.484 21.4204C270.242 21.5436 269.942 21.7021 269.581 21.9001C269.225 22.0982 268.789 22.3446 268.274 22.6307V34.7646ZM268.274 62.6412C268.688 62.4652 269.04 62.3067 269.348 62.1703C269.661 62.0251 269.911 61.9018 270.123 61.7962C272.794 60.4363 274.924 58.7198 276.522 56.6601C278.111 54.6004 278.912 52.5099 278.912 50.4017C278.912 48.2936 278.115 47.0613 276.522 46.6784C274.929 46.2955 272.746 46.8148 269.969 48.2276L268.274 49.0902V62.6412Z" fill="white"/>
+<path d="M59.6484 113.606L95.1302 95.5307V78.5468L78.7404 86.8957V76.091L93.4357 68.6091V52.6287L78.7404 60.1149V49.8164L95.1302 41.4674V24.8488L59.6484 42.9242V113.606Z" fill="white"/>
+<path d="M98.3339 23.216V40.1559L108.861 34.7866V88.5329L127.953 78.8065V25.0645L138.895 19.4883V2.54841L98.3339 23.216Z" fill="white"/>
+<path d="M31.5428 93.0925C30.8254 91.2396 30.152 89.5408 29.5535 88.1104C28.8977 86.5524 28.308 85.1749 27.793 83.9734L18.225 64.0363L0 73.3183V144L18.2206 134.718V97.7049C18.5507 98.6071 18.828 99.4741 19.2021 100.403C20.0119 102.418 20.9185 104.557 21.9307 106.82L31.5428 127.923L49.7634 118.641V47.9635L31.5428 57.2454V93.0925Z" fill="white"/>
+</svg>
+      </div>
+      <div class="nbl-linksSm"><a class="btn-2 nbl-links__item nbl-textAnimation" href="#">Main</a><a class="btn-2 nbl-links__item nbl-textAnimation" href="#">Portfolio</a><a class="btn-2 nbl-links__item nbl-textAnimation" href="#">About </a><a class="btn-2 nbl-links__item nbl-textAnimation" href="#">Services</a><a class="btn-2 nbl-links__item nbl-textAnimation" href="#">Contacts</a></div>
+      <div class="nbl-header__link"> <a class="btn-2 nbl-textAnimation _viceversa" href="#">Text to Telegram</a></div>
+    </div>
+    <div class="page">
+      <div class="icons-fixed"><a class="icons-fixed__item" href="#"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_5835_3055)">
+<path d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM33.9209 15.8398C34.2758 14.3638 33.3768 13.6958 32.4473 14.1318L12.0742 22.2773C10.6838 22.8564 10.6921 23.6609 11.8193 24.0195L17.0498 25.7109L29.1523 17.7939C29.7244 17.4333 30.2467 17.6271 29.8174 18.0225L20.0117 27.1982H20.0098L20.0117 27.1992L19.6514 32.7891C20.1797 32.789 20.4126 32.5378 20.709 32.2412L23.25 29.6797L28.5352 33.7275C29.5093 34.2836 30.2087 33.9973 30.4512 32.792L33.9209 15.8398Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_5835_3055">
+<rect width="48" height="48" rx="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+          <div class="nbl-clipPopup icons"> 
+            <div class="h7">Telegram channel</div>
+          </div></a><a class="icons-fixed__item" href="#"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_5983_851)">
+<mask id="mask0_5983_851" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M48 0H0V48H48V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_5983_851)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33.9926 4.13906L43.861 14.0074C49.3798 19.5262 49.3798 28.4738 43.861 33.9926L33.9926 43.861C28.4738 49.3798 19.5262 49.3798 14.0074 43.861L4.13906 33.9926C-1.37969 28.4738 -1.37969 19.5262 4.13906 14.0074L14.0074 4.13906C19.5262 -1.37969 28.4738 -1.37969 33.9926 4.13906ZM6.6 29.7518V18.2483C6.6 11.8151 11.8151 6.6 18.2483 6.6H29.7518C36.1848 6.6 41.4 11.8151 41.4 18.2483V29.7518C41.4 36.1848 36.1848 41.4 29.7518 41.4H18.2483C11.8151 41.4 6.6 36.1848 6.6 29.7518Z" fill="white"/>
+<path d="M43.7853 1.20016C44.3066 1.2018 44.819 1.33476 45.2748 1.58662C45.7505 1.8392 46.1419 2.2238 46.4016 2.69358C46.6627 3.1509 46.8 3.66772 46.8 4.19353C46.8 4.71935 46.6627 5.23619 46.4016 5.69351C46.1412 6.16213 45.7529 6.54813 45.2813 6.80704C44.8229 7.0647 44.3054 7.20006 43.7786 7.20001C43.2653 7.18998 42.7622 7.05265 42.3158 6.80046C41.8461 6.54116 41.4602 6.1551 41.202 5.68696C40.9394 5.23249 40.8007 4.71767 40.8 4.19353C40.8005 3.66525 40.9392 3.14617 41.202 2.68703C41.4576 2.2136 41.844 1.82269 42.3158 1.56042C42.7673 1.31902 43.2727 1.19509 43.7853 1.20016ZM43.7853 1.69143C43.3512 1.69539 42.9252 1.80803 42.5465 2.01893C42.1502 2.23141 41.8233 2.55179 41.604 2.94246C41.3856 3.3237 41.2706 3.75484 41.2706 4.19353C41.2706 4.63223 41.3856 5.06339 41.604 5.44461C41.8209 5.83482 42.1457 6.15527 42.5397 6.36817C42.9204 6.58727 43.3521 6.70264 43.7918 6.70264C44.2317 6.70264 44.6635 6.58727 45.0441 6.36817C45.4382 6.15527 45.7629 5.83482 45.9799 5.44461C46.1983 5.06339 46.313 4.63223 46.313 4.19353C46.313 3.75484 46.1983 3.3237 45.9799 2.94246C45.7622 2.55042 45.4349 2.22961 45.0374 2.01893C44.6549 1.80589 44.2238 1.69318 43.7853 1.69143ZM42.5858 5.73937V2.5102H43.6997C43.9793 2.49719 44.2591 2.52587 44.5301 2.59532C44.6983 2.65076 44.8425 2.76169 44.9385 2.90973C45.0345 3.04871 45.0873 3.21275 45.0902 3.38133C45.0917 3.49593 45.0696 3.60959 45.0254 3.71543C44.9813 3.82129 44.9157 3.9171 44.8332 3.99705C44.6599 4.17611 44.4237 4.28171 44.1741 4.29181C44.2759 4.33156 44.3697 4.38923 44.4509 4.46209C44.6342 4.6629 44.7955 4.88245 44.9321 5.1171L45.3273 5.77211H44.6683L44.3784 5.2612C44.2428 4.97973 44.0575 4.72465 43.8314 4.50796C43.7064 4.42701 43.5585 4.38798 43.4097 4.3966H43.0999V5.77211L42.5858 5.73937ZM43.1066 3.91844H43.7657C43.9817 3.94103 44.1991 3.89274 44.3851 3.7809C44.4401 3.73993 44.4845 3.68641 44.5142 3.62485C44.544 3.56327 44.5584 3.49549 44.5565 3.42719C44.5596 3.33457 44.5291 3.24393 44.4708 3.17173C44.4173 3.09445 44.3414 3.0351 44.2533 3.00143C44.082 2.95242 43.9039 2.93248 43.7261 2.94246H43.1263L43.1066 3.91844Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_5983_851">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+          <div class="nbl-clipPopup icons"> 
+            <div class="h7">Best on Dprofile</div>
+          </div></a></div>
+      <div class="page-container">
+        <div class="nbl-bigBlock _marginTop">
+          <div class="nbl-projects">
+            <div class="nbl-linksSm _contentList">
+              <div class="nbl-linksSm__item"> <a class="h2 nbl-textAnimation" href="#">New</a></div>
+              <div class="nbl-linksSm__item"> <a class="h2 nbl-textAnimation" href="#">Websites</a></div>
+              <div class="nbl-linksSm__item"> <a class="h2 nbl-textAnimation" href="#">Applications</a></div>
+              <div class="nbl-linksSm__item"> <a class="h2 nbl-textAnimation" href="#">Services</a></div>
+              <div class="nbl-linksSm__item"> <a class="h2 nbl-textAnimation" href="#">Advertisement</a></div>
+              <div class="nbl-linksSm__item"> <a class="h2 nbl-textAnimation" href="#">Content creation</a></div>
+            </div>
+            <div class="nbl-projects__wrapper">
+              <div class="nbl-project" js-modal-open data-modal-name="caseModal" data-modal-url="api/case2.xml" data-modal-title="Linktech app" data-modal-background="#F2F2F2">
+                <div class="nbl-project__img"><img src="img/new/nbl-project.jpg" alt="">
+                  <div class="nbl-project__mesh"> 
+                    <div class="nbl-project__icons"> 
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Best on Dprofile</div>
+                        </div>
+                      </div>
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Interfaces</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nbl-project__icons"> 
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Interfaces</div>
+                        </div>
+                      </div>
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Best on Dprofile</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nbl-project__icons"> 
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Best on Dprofile</div>
+                        </div>
+                      </div>
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Interfaces</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nbl-project__info"> 
+                  <div class="h3 nbl-textAnimation">Linktech app</div>
+                  <div class="h7">development / support / creatives</div>
+                </div>
+              </div>
+              <div class="nbl-project" js-modal-open data-modal-name="caseModal" data-modal-url="api/case2.xml" data-modal-title="Linktech app" data-modal-background="#F2F2F2">
+                <div class="nbl-project__img"><video class="" loop muted="muted" autoplay="autoplay" playsinline webkit-playsinline preload="auto" poster="img/new/escape2.png">
+<source src="img/new/escape.webm" type="video/webm">
+<source src="img/new/escape.mp4" type="video/mp4">
+</video>
+                  <div class="nbl-project__mesh"> 
+                    <div class="nbl-project__icons"> 
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Interfaces</div>
+                        </div>
+                      </div>
+                      <div class="nbl-project__img-icon">
+                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                        <div class="nbl-clipPopup dp"> 
+                          <div class="h7">Best on Dprofile</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nbl-project__info"> 
+                  <div class="h3 nbl-textAnimation">DoBuy shop</div>
+                  <div class="h7">development / support / creatives</div>
+                </div>
+              </div>
+              <div class="nbl-projects__small"> 
+                <div class="nbl-project" js-modal-open data-modal-name="caseModal" data-modal-url="api/case3.xml" data-modal-title="Linktech app" data-modal-background="#F2F2F2">
+                  <div class="nbl-project__img"><img src="img/new/agave-preview.jpg" alt="">
+                    <div class="nbl-project__mesh"> 
+                      <div class="nbl-project__icons"> 
+                        <div class="nbl-project__img-icon">
+                           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_5835_3754)">
+<rect width="40" height="40" fill="url(#pattern0_5835_3754)"/>
+<path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"/>
+</g>
+<defs>
+<pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"/>
+</pattern>
+<clipPath id="clip0_5835_3754">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+<image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
+                          <div class="nbl-clipPopup dp"> 
+                            <div class="h7">Best on Dprofile</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nbl-project__info"> 
+                    <div class="h3 nbl-textAnimation">Linktech app</div>
+                    <div class="h7">branding / video content / 3D modeling / website development</div>
+                  </div>
+                </div>
+                <div class="nbl-project" js-modal-open data-modal-name="caseModal" data-modal-url="api/case3.xml" data-modal-title="Linktech app" data-modal-background="#F2F2F2">
+                  <div class="nbl-project__img"><video class="" loop muted="muted" autoplay="autoplay" playsinline webkit-playsinline preload="auto" poster="img/new/escape2.png">
+<source src="img/new/escape.webm" type="video/webm">
+<source src="img/new/escape.mp4" type="video/mp4">
+</video>
+                  </div>
+                  <div class="nbl-project__info"> 
+                    <div class="h3 nbl-textAnimation">Linktech app</div>
+                    <div class="h7">3D modeling / support</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nbl-footer">
+      <div class="nbl-footer__wrapper">
+        <div class="nbl-footer__top">
+          <div class="nbl-footer__top-el _notList"><img src="img/new/netlab.png" alt=""></div>
+          <div class="nbl-footer__top-el">
+            <div class="h4 nbl-footer__title">Pages</div><a class="btn-1 nbl-textAnimation" href="#">Main</a><a class="btn-1 nbl-textAnimation" href="#">Portfolio</a><a class="btn-1 nbl-textAnimation" href="#">About</a><a class="btn-1 nbl-textAnimation" href="#">Services</a><a class="btn-1 nbl-textAnimation" href="#">Contacts</a>
+          </div>
+          <div class="nbl-footer__top-el">
+            <div class="h4 nbl-footer__title">Expertise</div><a class="btn-1 nbl-textAnimation" href="#">E-commerce</a><a class="btn-1 nbl-textAnimation" href="#">Construction</a><a class="btn-1 nbl-textAnimation" href="#">Medicine</a><a class="btn-1 nbl-textAnimation" href="#">Start-up</a>
+          </div>
+          <div class="nbl-footer__top-el">
+            <div class="h4 nbl-footer__title">Contacts</div>
+            <div class="btn-1">Moscow, Bersenevskaya embankment, 6, building 1.</div><a class="btn-1 nbl-textAnimation" href="#">+7 (495) 641 61 55</a><a class="btn-1 nbl-textAnimation" href="#">info@netlab.pro</a><a class="btn-1 nbl-textAnimation _viceversa" href="#">Telegram channel</a>
+          </div>
+        </div>
+        <div class="nbl-footer__middle"><a class="btn-3 nbl-textAnimation _viceversa" href="#">Discuss the project</a></div>
+        <div class="nbl-footer__bottom">
+          <div class="h5">
+            <button class="scroll-up nbl-textAnimation _viceversa">Go up</button>
+          </div>
+          <div class="h5">2025 © NetLab</div>
+          <div class="h5"><a class="nbl-textAnimation" href="#">Privacy Policy</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal_mini" data-modal-name="tgPopup">
+      <div class="modal__inner">
+        <div class="modal__top"><span>Subscribe to our <br/>Telegram channel</span>
+          <svg class="modal__close-button" js-modal-close width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28.5" cy="28.5" r="28.5" fill="#080808"></circle>
+            <path d="M19 39L39 19" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M19 19L39 39" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <div class="modal__body"><a class="h3 button button_icon fill-button fill-button_round fill-button_blue" href="https://t.me/+JK6TxMbMNNo5MmJi" target="_blank"><span>Subscribe</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#000" stroke-width="2" d="M16.663 6.962 6.587 17.038M16.663 6.962v8.485m0-8.485H8.178"/></svg></a></div>
+      </div>
+    </div>
+    <div class="modal" data-modal-name="siteOrder">
+      <div class="modal__inner">
+        <div class="modal__top"><span>Start the project</span>
+          <svg class="modal__close-button" js-modal-close width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28.5" cy="28.5" r="28.5" fill="#080808"></circle>
+            <path d="M19 39L39 19" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M19 19L39 39" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <div class="modal__body">
+          <form class="order-site-form" id="orderSite" action="/api">
+            <div class="loading-icon"><img src="img/loadingIcon.svg" alt=""></div>
+            <div class="order-site-form__block">
+              <div class="order-site-form__title">What services do you need?</div>
+              <div class="order-site-form__project-type">
+                <div class="form-switch" data-switch-values>
+                  <div class="form-switch__container">
+                    <button class="form-switch__option" type="button" data-switch-option="site"><span>Company website</span>
+                      <svg class="form-switch__option-dismiss" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <button class="form-switch__option" type="button" data-switch-option="service"><span>Service</span>
+                      <svg class="form-switch__option-dismiss" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <button class="form-switch__option" type="button" data-switch-option="app"><span>Application</span>
+                      <svg class="form-switch__option-dismiss" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <button class="form-switch__option" type="button" data-switch-option="landing"><span>Landing page</span>
+                      <svg class="form-switch__option-dismiss" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <button class="form-switch__option" type="button" data-switch-option="ux-design"><span>UX design</span>
+                      <svg class="form-switch__option-dismiss" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                    <button class="form-switch__option" type="button" data-switch-option="ui-ux-design"><span>UX/UI design</span>
+                      <svg class="form-switch__option-dismiss" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-site-form__block">
+              <div class="order-site-form__title">Describe the project, don't forget about the deadlines:</div>
+              <div class="order-site-form__project-description">
+                <div class="ui-input" js-input-focus>
+                  <label class="ui-input__float-label" for="order-site-description">Describe the task in free form</label><span class="textarea" role="textbox" contenteditable id="order-site-description"></span>
+                </div>
+                <div class="drag-file">
+                  <div class="drag-file__input">
+                    <input class="drag-file__file" id="file" type="file" accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf" name="file">
+                    <label for="file">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="16" fill="#080808"></circle>
+                        <path stroke="#fff" stroke-linecap="round" d="M21 8v12c0 2.7614-2.2386 5-5 5v0c-2.7614 0-5-2.2386-5-5V9.8947C11 8.296 12.296 7 13.8947 7v0c1.5988 0 2.8948 1.296 2.8948 2.8947V20">     </path>
+                      </svg><span>Прикрепить файл</span>
+                      <svg class="drag-file__dismiss-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17L17 5" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M5 5L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </label>
+                    <div class="drag-file__message"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-site-form__block">
+              <div class="order-site-form__title">Contact details:</div>
+              <div class="order-site-form__contacts">
+                <div class="ui-input" js-input-focus>
+                  <label class="ui-input__float-label" for="order-site-name">Hello my name is</label>
+                  <input type="text" name="name" id="order-site-name">
+                  <div class="ui-input__error"></div>
+                </div>
+                <div class="ui-input" js-input-focus>
+                  <label class="ui-input__float-label" for="order-site-company">I represent the company</label>
+                  <input type="text" name="company" id="order-site-company">
+                  <div class="ui-input__error"></div>
+                </div>
+                <div class="ui-input" js-input-focus>
+                  <label class="ui-input__float-label" for="order-site-email">My email</label>
+                  <input type="email" name="email" id="order-site-email">
+                  <div class="ui-input__error"></div>
+                </div>
+                <div class="ui-input" js-input-focus>
+                  <label class="ui-input__float-label" for="order-site-phone">My phone</label>
+                  <input type="tel" name="phone" id="order-site-phone">
+                  <div class="ui-input__error"></div>
+                </div>
+                <div class="error-field"></div>
+              </div>
+              <div class="g-recaptcha" id="recaptcha32" data-sitekey="6LeEZa4nAAAAAFe7Soh1oY83zi39KPrrtc0onpro" data-size="invisible"></div>
+            </div>
+            <div class="order-site-form__block">
+              <div class="order-site-form__confirm-button">
+                <button class="full-slide-btn" type="submit">
+                  <div class="full-slide-btn-inner"> <span>
+                      <h3>Go to website</h3></span><span>
+                      <h3>Go to website</h3></span></div>
+                </button>
+              </div>
+              <p class="order-site-form__policy">By clicking the "send" button, you agree to the processing of<br/> personal data. data processing policy</p>
+            </div>
+          </form>
+          <div class="form-response">Thank you for your application. We will study all the data and contact you.</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal case-modal" data-modal-name="caseModal">
+      <div class="modal__inner">
+        <div class="modal__top"><span class="h2"> Artkelop case</span><svg js-modal-close width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9991 13.0607L5.52941 19.5303L4.46875 18.4697L10.9384 12L4.46875 5.53033L5.52941 4.46967L11.9991 10.9393L18.4688 4.46967L19.5294 5.53033L13.0597 12L19.5294 18.4697L18.4688 19.5303L11.9991 13.0607Z" fill="#0D0D0D"/>
+</svg>
+        </div>
+        <div class="modal__body">
+          <div class="modal-blog-wrapper">
+            <div class="modal-blog-wrapper__block">
+              <p class="h3"> 
+                <An>innovative platform for wholesale purchasing of electronics, which establishes a direct connection between manufacturers, suppliers and stores around the world. Our team has developed a mobile application that provides convenience and efficiency of the purchasing process on an international level.</An>
+              </p><img class="full-width-img" src="img/screenshot.jpg" alt="">
+              <video class="full-width-video" src="img/Netlab2.webm" preload="auto" no-controls autoplay loop playsinline muted> </video>
+            </div>
+            <div class="modal-blog-wrapper__block"><img class="full-width-img" src="img/screenshot.jpg" alt=""><img class="full-width-img" src="img/screenshot.jpg" alt=""></div>
+            <div class="modal-blog-wrapper__block _big"><img class="full-width-img" src="img/new/screen2.jpg" alt=""></div>
+            <div class="modal-blog-wrapper__block">
+              <div class="case-modal-tg-banner">
+                <div class="h2">Want to discuss the project?</div>
+                <h3>text to us, we are in touch</h3>
+                <div class="modal-links"><a class="modal-link" href=""><svg width="41" height="34" viewBox="0 0 41 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.3292 0.434128L1.86921 14.1081C-0.550787 15.0801 -0.536787 16.4301 1.42521 17.0321L10.5292 19.8721L31.5932 6.58213C32.5892 5.97613 33.4992 6.30213 32.7512 6.96613L15.6852 22.3681H15.6812L15.6852 22.3701L15.0572 31.7541C15.9772 31.7541 16.3832 31.3321 16.8992 30.8341L21.3212 26.5341L30.5192 33.3281C32.2152 34.2621 33.4332 33.7821 33.8552 31.7581L39.8932 3.30213C40.5112 0.824129 38.9472 -0.297872 37.3292 0.434128Z" fill="white"/>
+</svg></a><a class="modal-link" href=""><img src="img/new/dm-order.png" alt=""></a></div>
+                <h4>Any question can be asked to Dmitry</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="loading-icon"><img src="img/loadingIcon.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="modal menu-modal" data-modal-name="menuModal">
+      <div class="modal__inner">
+        <svg class="modal__close-button" js-modal-close width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28.5" cy="28.5" r="28.5" fill="transparent"></circle>
+          <path d="M19 39L39 19" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M19 19L39 39" stroke="black" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <div class="modal__top">
+          <div class="h1">Main</div>
+          <div class="h1">Portfolio</div>
+          <div class="h1">About us</div>
+          <div class="h1">Services</div>
+          <div class="h1">Contacts</div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__links"> 
+            <div class="modal__links-item"> 
+              <div class="h6">Telegram channel</div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" rx="16" fill="#1D1D1D"/>
+<path d="M21.6316 9.42098L8.04922 14.8516C7.12228 15.2376 7.12764 15.7737 7.87916 16.0128L11.3663 17.1407L19.4345 11.8626C19.816 11.622 20.1646 11.7514 19.8781 12.0151L13.3412 18.132H13.3397L13.3412 18.1328L13.1007 21.8596C13.4531 21.8596 13.6086 21.692 13.8062 21.4942L15.5 19.7865L19.0231 22.4847C19.6728 22.8556 20.1393 22.665 20.3009 21.8612L22.6137 10.56C22.8504 9.57587 22.2514 9.13027 21.6316 9.42098Z" fill="white"/>
+</svg>
+            </div>
+            <div class="modal__links-item"> 
+              <div class="h6">Dpopfile</div><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33.9926 4.13906L43.861 14.0074C49.3798 19.5262 49.3798 28.4738 43.861 33.9926L33.9926 43.861C28.4738 49.3798 19.5262 49.3798 14.0074 43.861L4.13906 33.9926C-1.37969 28.4738 -1.37969 19.5262 4.13906 14.0074L14.0074 4.13906C19.5262 -1.37969 28.4738 -1.37969 33.9926 4.13906ZM6.6 29.7518V18.2483C6.6 11.8151 11.8151 6.6 18.2483 6.6H29.7518C36.1848 6.6 41.4 11.8151 41.4 18.2483V29.7518C41.4 36.1848 36.1848 41.4 29.7518 41.4H18.2483C11.8151 41.4 6.6 36.1848 6.6 29.7518Z" fill="#000000"/>
+</svg>
+            </div>
+          </div>
+          <div class="nbl-contactBadge"> 
+            <div class="nbl-contactBadge__bg"> <img src="img/new/dm-mob.jpg" alt=""></div>
+            <div class="nbl-contactBadge__info"> 
+              <div class="nbl-contactBadge__titles">
+                <div class="h5-sm">Dmitry Maximov</div>
+                <div class="h7-sm">Responsible for your project</div>
+              </div>
+              <div class="nbl-contactBadge__text"> 
+                <div class="h7-sm">Text to Telegram</div><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.4987 2.78774L2.2012 7.91549C1.2937 8.27999 1.29895 8.78624 2.0347 9.01199L5.4487 10.077L13.3477 5.09324C13.7212 4.86599 14.0624 4.98824 13.7819 5.23724L7.3822 11.013H7.3807L7.3822 11.0137L7.1467 14.5327C7.4917 14.5327 7.64395 14.3745 7.83745 14.1877L9.4957 12.5752L12.9449 15.123C13.5809 15.4732 14.0377 15.2932 14.1959 14.5342L16.4602 3.86324C16.6919 2.93399 16.1054 2.51324 15.4987 2.78774Z" fill="black"/>
+</svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-background fixed-block" js-modal-close></div>
+    <script defer src="js/main.js"></script>
+    <script>
+      window.appConfig = {
+        // показывать ли баннер
+        showPopupBanner: true,
+        // задержка в секундах
+        showPopupBannerTimeout: 1,
+      }
+    </script>
+    <div>
+      <style>
+        .pl {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
+        
+        }
+        .pl * {
+          color: #000;
+        }
+        .pl .pl__trigger {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          bottom: 0;
+          left: 0;
+        }
+        .pl .pl__ctr {
+          position: absolute;
+          bottom: 40px;
+          left: 0;
+          background-color: #fff;
+          display: none;
+        }
+        .pl._v .pl__ctr {
+          display: block;
+        }
+        .pl a {
+          display: block;
+          padding: 4px 8px;
+        }
+      </style>
+      <div class="pl" title="список страниц">
+        <div class="pl__trigger"></div>
+        <div class="pl__ctr"><a href="about.html">about  <b><small>(about.html)</small></b></a><a href="cases.html">cases  <b><small>(cases.html)</small></b></a><a href="contacts.html">contacts  <b><small>(contacts.html)</small></b></a><a href="index.html">index  <b><small>(index.html)</small></b></a><a href="uslugi.html">uslugi  <b><small>(uslugi.html)</small></b></a><a href="portfolio.html">portfolio  <b><small>(portfolio.html)</small></b></a><a href="portfolio-sites.html">portfolio-sites  <b><small>(portfolio-sites.html)</small></b></a></div>
+      </div>
+      <script>
+        (() => {
+        const pl = document.querySelector(".pl");
+        if (!pl) { return }
+        pl.querySelector('.pl__trigger').addEventListener('click', (e) => {
+          pl.classList.toggle('_v');
+        })
+        })();
+      </script>
+    </div>
+  </body>
+</html>

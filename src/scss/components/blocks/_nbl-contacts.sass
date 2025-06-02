@@ -1,0 +1,47 @@
+
+.nbl-contacts 
+  // height: 60vh
+  height: 52vh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  //gap: 36.7592592593vh
+  +r($sm)
+    padding-bottom: 52px
+  &__top 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +r($sm)
+      order: 1
+      flex-direction: column
+      align-items: flex-start
+      gap: 50px
+      width: 244px
+      padding: 0 12px
+  &__body 
+    +r($sm)
+      width: 244px
+      padding: 0 12px
+  &__bottom 
+    display: none 
+    +r($sm)
+      order: 2
+      display: flex
+      justify-content: space-between
+      border-top: 1px solid #292929
+      border-bottom: 1px solid #292929
+    &-left
+      +r($sm)
+        border-right: 1px solid #292929
+    &-left, &-right 
+      width: 50%
+      display: flex
+      flex-direction: column
+      gap: 16px
+      padding: 16px 12px
+      svg, img 
+        width: 32px
+        height: 32px
+      .h6 
+        color: #ffffff

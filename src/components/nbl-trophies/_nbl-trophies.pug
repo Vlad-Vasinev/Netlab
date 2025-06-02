@@ -1,0 +1,26 @@
+.nbl-trophies 
+  .nbl-trophies__info
+    .h2
+      |Whether you're a seasoned investor or new to real estate,
+      |Foundation delivers seamless capital, AI-generated insights
+      |and expert guidance – empowering you to invest with confidence.
+    .nbl-trophies__controls
+      <div class="swiper-pagination"></div>
+      .nbl-trophies__controls-btns
+        <div class="swiper-button-prev">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 30L25 20L15 10" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 30L25 20L15 10" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+  .trophies-slider 
+    .trophies-slider__wrapper.swiper-wrapper 
+      - var i = 0
+      while i < 5
+        .trophies-slider__el.swiper-slide
+          img(src="img/new/trophies.jpg" alt="")
+        - i++

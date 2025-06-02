@@ -1,0 +1,30 @@
+
+.nbl-team 
+  display: grid 
+  grid-template-columns: repeat(3, 1fr) 
+  gap: aCalc(120) aCalc(16)
+  +r($sm)
+    grid-template-columns: repeat(2, 1fr) 
+    gap: 40px 12px
+
+.nbl-teamItem 
+  &__img 
+    height: aCalc(684)
+    width: aCalc(459)
+    overflow: hidden
+    border-radius: aCalc(4)
+    margin-bottom: aCalc(24)
+    +r($sm)
+      width: 100%
+      height: 244px
+      border-radius: 4px
+      margin-bottom: 12px
+  img, video 
+    height: 100% 
+    width: 100% 
+    object-fit: cover
+  &__info 
+    .h3 
+      margin-bottom: aCalc(6)
+      +r($sm)
+        margin-bottom: 4px

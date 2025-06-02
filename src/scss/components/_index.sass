@@ -1,0 +1,978 @@
+.page-container
+  // +aPadding(0, 120)
+  +aPadding(0, 16)
+  +r($sm)
+    padding: 0 15px
+  &.contacts-page
+    +r($sm)
+      padding: 0
+    .nbl-bigBlock
+      margin-bottom: aCalc(40)
+      +r($sm)
+        margin-bottom: 0
+      &._marginTop
+        //margin-top: 36.7592592593vh
+        margin-top: 47.0648148149vh
+        +r($sm)
+          margin-top: 264px
+
+.project-slide
+  display: block
+  +rmin($sm1)
+    flex: 1
+  
+  .project-slide__img
+    +aProp(border-radius, 32)
+    display: block
+    aspect-ratio: 1
+    height: auto
+    position: relative
+    +aProp(margin-bottom, 30)
+    transform-origin: top
+    transition: transform 0.4s
+    +r($sm)
+      border-radius: 32px
+      margin-bottom: 15px
+    img
+      +aProp(border-radius, 32)
+      width: 100%
+      height: 100%
+      object-fit: cover
+      +r($sm)
+        border-radius: 32px
+  .project-slide__title 
+    +aProp(margin-bottom, 15)
+    transition: transform 0.4s
+    text-align: center
+    +r($sm)
+      margin-bottom: 6px
+      // text-align: left
+    h3
+      +aProp(font-size, 24)
+      +aProp(line-height, 32)
+      letter-spacing: 0em
+      +r($sm)
+        font-size: 20px
+        line-height: 24px
+  .project-slide__desc
+    transition: transform 0.4s
+    p
+      +aProp(font-size, 14)
+      font-weight: 400
+      +aProp(line-height, 20)
+      letter-spacing: 0em
+      text-align: center
+      color: #9C9C9C
+      +r($sm)
+        // text-align: left
+        font-size: 11px
+        line-height: 14px
+  &:hover
+    +rmin($sm1)
+      .project-slide__img
+        transform: scale(0.9)
+      .project-slide__title 
+        transform: translateY(aCalc(-25))
+      .project-slide__desc
+        transform: translateY(aCalc(-25))
+
+
+.information-block
+  +aProp(margin-bottom, 200)
+  +r($sm)
+    display: flex
+    flex-direction: column
+    margin-bottom: 60px
+  &:last-child
+    +r($sm)
+      .information-block-slider
+        padding: 0
+        border-bottom: none
+  .information-block__header
+    grid-area: 1/1/2/2
+    h2
+      @extend .h1
+      font-weight: 400
+  .information-block__description
+    grid-area: 1/2/3/3
+    +r($sm)
+      margin-top: 20px
+    p
+      font-weight: 300
+      +aProp(font-size, 24)
+      +aProp(line-height, 32)
+      +r($sm)
+        font-size: 16px
+        line-height: 22px
+  .information-block__tags
+    grid-area: 2/1/3/2
+    display: flex
+    +aProp(gap, 8)
+    +aProp(margin-top, 20)
+    +hideScroll
+    +r($sm)
+      max-width: 100%
+      overflow: scroll
+      margin-top: 15px
+    &:empty
+      display: none
+    .information-block__tags-item
+      // flex: 1
+      display: flex 
+      align-items: center
+      +aProp(gap, 10)
+      +aProp(padding, 4)
+      +aProp(padding-right, 10)
+      +aProp(border-radius, 10)
+      background-color: #222222
+      // border: 1px solid #4D4D4D
+      font-weight: 400
+      white-space: nowrap
+      min-width: max-content
+      +aProp(font-size, 16)
+      +aProp(line-height, 22)
+      +r($sm)
+        gap: 10px
+        padding: 4px
+        padding-right: 10px
+        border-radius: 10px
+        font-size: 14px
+        line-height: 18px
+      img
+        +aProp(width, 28)
+        height: auto
+        
+        
+        +r($sm)
+          width: 28px
+      
+  .information-block-slider
+    grid-area: 3/1/4/3
+    +aProp(margin-top, 24)
+    overflow: hidden
+    +aProp(padding-bottom, 60)
+    border-bottom: 1px solid #1A1A1A
+    +r($sm)
+      overflow: visible
+      margin-top: 20px
+      padding-bottom: 30px
+    &._no-border-bottom
+      padding: 0
+      border-bottom: none
+    .swiper-wrapper
+      +r($sm)
+        display: grid
+        flex-wrap: wrap
+        column-gap: 10px
+        row-gap: 30px
+        grid-template-columns: 1fr 1fr
+        grid-auto-rows: auto
+    .information-block-slider__slider-item
+      width: 16.667%
+      
+      // +aProp(padding-right, 120)
+      +r($sm)
+        width: 100%
+        padding-right: 0
+
+      &:nth-of-type(6) ~ .information-block-slider__slider-item
+        +r($sm)
+          display: none
+      .information-block-slider__slide-image
+        +aProp(border-radius, 32)
+        display: block
+        aspect-ratio: 1
+        height: auto
+        position: relative
+        +aProp(margin-bottom, 30)
+        transform-origin: top
+        transition: transform 0.4s
+        +r($sm)
+          // border-radius: 32px
+          border-radius: 22px
+          margin-bottom: 15px
+        .information-block-slider__full-image
+          position: relative
+          width: 100%
+          height: 100%
+          border-radius: inherit
+          img
+            border-radius: inherit
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .information-block-slider__slide-screenshot
+          position: absolute
+          bottom: 0
+          right: 0
+          height: 85.4%
+          img
+            height: 100%
+            +aProp(border-bottom-right-radius, 32)
+            +r($sm)
+              border-bottom-right-radius: 32px
+        .information-block-slider__slide-logo
+          position: absolute
+          +aProp(width, 56)
+          aspect-ratio: 1
+          +aProp(bottom, 10)
+          +aProp(left, 10)
+          +r($sm)
+            width: 44px
+            bottom: 10px
+            left: 10px
+          img
+            width: 100%
+        .information-block-slider__slide-tag
+          position: absolute
+          background: #fff
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2)
+          // font-family: $interFont
+          +aProp(font-size, 20)
+          +aProp(border-radius, 20)
+          text-transform: lowercase
+          font-weight: 700
+          +aProp(padding, 8)
+          line-height: 1.2
+          +aProp(bottom, 10)
+          +aProp(left, 10)
+          color: black
+          +r($sm)
+            font-weight: 600
+            padding: 4px
+            font-size: 16px
+            border-radius: 20px
+            bottom: 10px
+            left: 10px
+      .information-block-slider__slide-title
+        +aProp(margin-bottom, 15)
+        transition: transform 0.4s
+        +r($sm)
+          margin-bottom: 6px
+        h3
+          @extend .h2
+          font-weight: 400
+          letter-spacing: 0em
+          text-align: center
+          +r($sm)
+            text-align: left
+      .information-block-slider__slide-desc
+        transition: transform 0.4s
+        p
+          @extend .h5
+          font-weight: 400
+          letter-spacing: 0em
+          text-align: center
+          color: #9C9C9C
+          +r($sm)
+            text-align: left
+      &:hover
+        +rmin($sm1)
+          .information-block-slider__slide-image
+            transform: scale(0.9)
+          .information-block-slider__slide-title
+            transform: translateY(calc(-16.6667px + -8.3333 * ((100vw - 1280px) / 640)))
+          .information-block-slider__slide-desc
+            transform: translateY(calc(-16.6667px + -8.3333 * ((100vw - 1280px) / 640)))
+    .swiper-slide.information-block-slider__slider-item._mobile-app
+      .information-block-slider__slide-logo
+        display: none
+      .information-block-slider__slide-image
+        .information-block-slider__slide-screenshot
+          right: 50%
+          transform: translateX(50%)
+          img
+            border-radius: 0
+  .information-block-table
+    grid-area: 3/1/4/3
+    +aProp(margin-top, 60)
+    overflow: hidden
+    +aProp(padding-bottom, 60)
+    // border-bottom: 1px solid #1A1A1A
+    display: flex
+    flex-direction: column
+    +r($sm)
+      overflow: visible
+      margin-top: 20px
+      padding-bottom: 30px
+    .information-block-table__item
+      display: flex
+      align-items: center
+      position: relative
+      cursor: pointer
+      padding: aCalc(24) 0
+      &:first-child
+        border-top: 1px solid #353535
+      & + .information-block-table__item
+        border-top: 1px solid #353535
+      &:last-child
+        border-bottom: 1px solid #353535
+      +r($sm)
+        padding: 20px 15px
+        margin: 0 -15px
+      span
+        display: block
+        +aProp(font-size, 24)
+        +aProp(line-height, 32)
+        transition: transform .3s ease
+        +r($sm)
+          font-size: 20px
+          line-height: 24px
+
+      &::before
+        content: ''
+        display: block
+        vertical-align: unset
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-width='2' d='M6.696 9.879 4.045 12.53a5.25 5.25 0 0 0 0 7.425v0a5.25 5.25 0 0 0 7.424 0l2.652-2.652M9.878 6.697l2.652-2.652a5.25 5.25 0 0 1 7.425 0v0a5.25 5.25 0 0 1 0 7.425l-2.652 2.651M14.65 9.348l-5.303 5.304'/%3E%3C/svg%3E")
+        +bg-cover
+        +aProp(width, 24)
+        +aProp(height, 24)
+        position: absolute
+        opacity: 0
+        transition: opacity .3s ease
+        flex: 0 0 auto
+        +r($sm)
+          opacity: 1
+          position: static
+          margin-right: 16px
+          width: 24px
+          height: 24px
+      &:hover
+        +rmin($sm1)
+          span
+            +aProp(--trx, 40)
+            transform: translateX(var(--trx))
+          &::before
+            opacity: 1
+.two-column-block,
+.three-column-block,
+.four-column-block,
+.six-column-block,
+.video-banner-block,
+.person-banner-block,
+.blog-filter-block,
+.blog-posts,
+.ul-block__list,
+.slider-arrow-navigation
+  // +rmin($sm1)
+  &[js-show-in-viewport]
+    opacity: .001
+    transform: translate3d(0,60px,0)
+    animation: show-in-viewport .85s cubic-bezier(.215,.61,.355,1)
+    animation-fill-mode: forwards
+    animation-play-state: paused
+    animation-delay: 0.5s
+    +r($sm)
+      animation-delay: 0.3s
+    &.inView
+      animation-play-state: running
+.information-block[js-show-in-viewport]
+  .information-block__description, .information-block__tags, .information-block-slider,
+  .information-block-clients-slider,.two-column-block, .three-column-block, .four-column-block,
+  .six-column-block, .information-block-team-gallery, .information-block-table
+    opacity: .001
+    transform: translate3d(0,60px,0)
+    animation: show-in-viewport .85s cubic-bezier(.215,.61,.355,1)
+    animation-fill-mode: forwards
+    animation-play-state: paused
+    animation-delay: 0.3s
+  .information-block__description
+    animation-delay: 0.3s
+  .information-block__tags
+    animation-delay: 0.4s
+    
+  .information-block-slider, .information-block-clients-slider, .two-column-block,
+  .three-column-block, .four-column-block, .six-column-block, .information-block-team-gallery,
+  .information-block-table
+    animation-delay: 0.5s
+    
+  &.inView
+    .information-block__description, .information-block__tags, .information-block-slider,
+    .information-block-clients-slider, .two-column-block, .three-column-block, .four-column-block,
+    .six-column-block, .information-block-team-gallery, .information-block-table
+
+      animation-play-state: running
+
+@keyframes show-in-viewport
+  0%
+    opacity: .001
+    transform: translate3d(0,60px,0)
+
+  80%
+    opacity: .999
+  100%
+    opacity: 1
+    transform: translateZ(0)
+
+.six-column-block .static-slide
+
+  +rmin($sm1)
+    grid-area: auto
+    grid-template-columns: 1fr
+    grid-auto-rows: max-content
+    grid-template-rows: min-content min-content min-content 1fr
+    .static-slide__title
+      grid-area: auto
+      margin: 0
+      +aProp(margin-top, 24)
+
+    .static-slide__desc
+      +aProp(margin-top, 10)
+
+.three-column-block .static-slide
+  +r($sm)
+    grid-template-rows: min-content 1fr
+    grid-template-columns: min-content 1fr
+  .static-slide__title
+    +r($sm)
+      grid-area: 2/1/3/-1
+      // margin-left: 13px
+  .static-slide__desc
+    +r($sm)
+      margin-top: 15px
+.static-slide.fill-button
+  &::before
+    background-color: #222222
+  // &:hover
+  //   background-color: #1A1A1A
+.information-block-clients-slider
+  grid-area: 3/1/4/3
+  +aProp(margin-top, 60)
+  overflow: hidden
+  +r($sm)
+    margin-top: 20px
+    overflow: visible
+  .swiper-wrapper
+  .information-block-clients-slider__item
+    width: 20%
+    // +aProp(padding-right, 5)
+    +r($sm)
+      width: auto
+      padding-right: 0
+      height: auto
+    .information-block-clients-slider__item-inner
+      +aProp(padding, 30)
+      position: relative
+      min-height: max-content
+      height: 100%
+      display: flex
+      flex-direction: column
+      +r($sm)
+        padding: 13px
+        // padding-bottom: 30px
+      &::before
+        background-color: #0F0F0F
+        z-index: -1
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        +aProp(border-radius, 24)
+        // transform: scale(0)
+        transition: transform 0.4s ease
+        +r($sm)
+          border-radius: 24px
+
+      .information-block-clients-slider__logo
+        +aProp(margin-bottom, 20)
+        +r($sm)
+          margin-bottom: 15px
+        img
+          +aProp(height, 90)
+          width: auto
+          +r($sm)
+            height: 60px
+      .information-block-clients-slider__description
+        p
+          @extend .h4
+          color: #9C9C9C
+          // +aProp(font-size, 14)
+          font-weight: 400
+          // +aProp(line-height, 20)
+          letter-spacing: 0em
+          text-align: left
+          color: #9C9C9C
+          +r($sm)
+    &:hover
+      .information-block-clients-slider__item-inner::before
+        +rmin($sm1)
+          transform: scale(0.939)
+
+.link-button-bottom-block
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +aProp(margin-top, 72)
+  +r($sm)
+    margin-top: 72px
+  .link-button-bottom-block__text
+    +aProp(font-size, 16)
+    +aProp(line-height, 22)
+    +r($sm)
+      font-size: 11px
+      line-height: 14px
+  .link-button-bottom-block__button
+    +aProp(width, 50)
+    height: auto
+    cursor: pointer
+    transition: transform 0.4s
+    +r($sm)
+      width: 29px
+      height: auto
+    path
+      stroke: #fff
+      transition: transform 0.4s, stroke 0.4s
+    circle
+      transition: transform 0.4s, fill 0.4s
+      fill: $Black
+.static-slide, .blog-posts-item
+  .link-button-bottom-block
+    grid-column: 1/-1
+    +aProp(margin-top, 40)
+    align-self: flex-end
+    +r($sm)
+      grid-row: 4/5
+      margin-top: 8px
+      align-self: flex-end
+
+.information-block-clients-slider__item-inner
+  .link-button-bottom-block
+    margin-top: auto
+    +aProp(padding-top, 40)
+    +r($sm)
+      padding-top: 8px
+
+.static-slide:hover, .blog-posts-item:hover, .information-block-clients-slider__item:hover
+  .link-button-bottom-block
+    .link-button-bottom-block__button
+      transform: rotateZ(43.35deg)
+      path
+        stroke: #000
+      circle
+        fill: #fff
+.information-block-team-gallery
+  display: grid
+  width: 100%
+  grid-area: 3/1/4/3
+  grid-template: auto / 1fr 1fr 1fr 1fr
+  +aProp(column-gap, 5)
+  +aProp(margin-top, 60)
+  +r($sm)
+    grid-template: auto / 1fr 1fr
+    column-gap: 10px
+    row-gap: 30px
+    margin-top: 20px
+  .information-block-team-gallery__item
+    width: 100%
+    height: auto
+    .information-block-team-gallery__photo
+      width: 100%
+      +aProp(height, 520)
+      +r($sm)
+        height: 210px
+      img
+        +aProp(border-radius, 24)
+        width: 100%
+        height: 100%
+        object-fit: cover
+        +r($sm)
+          border-radius: 24px
+    .information-block-team-gallery__name
+      font-weight: 400
+
+      +aProp(margin-top, 24)
+      +aProp(font-size, 24)
+      +aProp(line-height, 32)
+      +r($sm)
+        margin-top: 15px
+        font-size: 16px
+        line-height: 20px
+.information-block-awards
+  display: grid
+  width: 100%
+  grid-area: 3/1/4/3
+
+  +aProp(gap, 5)
+  grid-template: auto / 1fr 1fr 1fr
+
+  +aProp(margin-top, 60)
+  +r($sm)
+    gap: 5px
+    margin-top: 20px
+    grid-template-columns: 1fr 1fr
+  .information-block-awards__item
+
+    +aProp(border-radius, 24)
+    display: flex
+    background-color: #1A1A1A
+
+    +aProp(padding, 30)
+    align-items: center
+    .information-block-awards__logo
+      img
+
+        +aProp(width, 72)
+        +aProp(height, 72)
+    .information-block-awards__name
+
+      +aProp(margin-left, 20)
+      +aProp(font-size, 22)
+      +aProp(line-height, 28)
+    .information-block-awards__count
+      margin-left: auto
+      color: #9C9C9C
+
+      +aProp(font-size, 22)
+      +aProp(line-height, 28)
+.video-banner-block
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100vh
+  aspect-ratio: 1680/830
+  position: relative
+  //+aProp(margin-bottom, 320)
+  +r($sm)
+    width: calc( 100% + 30px )
+    margin: 0 -15px
+    aspect-ratio: 375/350
+    margin-bottom: 0
+    height: 500px
+    //height: 500px
+  .video-banner-block__title
+    +r($sm)
+      position: absolute
+    .nbl-transfText
+      +r($sm)
+        padding: 0
+  &._fullMob 
+    +r($sm) 
+      height: 90vh 
+    .video-banner-block__background
+      +r($sm)
+        display: grid
+        justify-content: center
+        align-items: center
+      video, img 
+        +r($sm)
+          height: 444px
+    .video-banner-block__title 
+      +r($sm)
+        bottom: 80px
+  &.fixed-size 
+    +r($sm)
+      height: unset
+    .video-banner-block__title
+      +r($sm)
+        position: unset
+        padding: 0 30px
+  &._smallMob 
+    +r($sm)
+      height: 375px
+  .video-banner-block__background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    img, video
+      z-index: 1
+      width: 100%
+      height: 100%
+      //+aProp(border-radius, 24)
+      object-fit: cover
+  .video-banner-block__title
+    @extend .h1
+    //position: absolute
+    margin: auto auto
+    font-weight: 400
+    text-align: left
+    opacity: 1
+    left: 25.3vw
+    width: 68.0520833333vw
+    bottom: aCalc(40)
+    //transform: translateY(60%)
+    transition: transform 0.4s, opacity 0.4s
+    z-index: 3
+    +r($sm)
+      width: unset
+      left: 32px
+      right: 24px
+      bottom: 24px
+      opacity: 1
+      transform: unset  
+.video-banner-block + div
+  +aProp(margin-top, 200)
+  +r($sm)
+    margin-top: 60px
+[js-cursor-animated-container]
+  cursor: none
+  *
+    cursor: none
+[js-cursor-hide]
+  cursor: pointer
+.main-header-block
+  h1
+    margin: 0 auto
+    +aProp(margin-top, 150)
+    +aProp(margin-bottom, 70)
+    letter-spacing: 0em
+    text-align: center
+    color: #FFFFFF
+    display: flex
+    flex-direction: column
+    align-items: center
+    +r($sm)
+      font-size: 26px
+      line-height: 30px
+      margin-bottom: 40px
+      margin-top: 50px
+    b
+      font-weight: 300
+      +aProp(font-size, 45)
+      +aProp(line-height, 53)
+      letter-spacing: 0em
+      text-align: left
+      color: #11E2C7
+      +r($sm)
+        font-size: 45px
+        line-height: 53px
+.two-column-block, .three-column-block, .four-column-block, .six-column-block
+  display: grid
+  width: 100%
+  +aProp(gap, 5)
+  grid-auto-rows: 1fr
+
+  +aProp(margin-bottom, 200)
+
+  +r($sm)
+    gap: 5px
+    margin: 0 -15px
+    width: auto
+    padding: 0 2px
+    grid-auto-rows: 1fr
+    margin-bottom: 60px
+  &._fit-content-row
+    +r($sm)
+      grid-auto-rows: auto
+.two-column-block
+  grid-template-columns: repeat(2, 1fr)
+  +r($sm)
+.three-column-block
+  grid-template-columns: repeat(3, 1fr)
+  +r($sm)
+    grid-template-columns: repeat(1, 1fr)
+  &._awards, &._two-col-mob
+    +r($sm)
+      grid-template-columns: repeat(2, 1fr)
+.four-column-block
+  grid-template-columns: repeat(4, 1fr)
+  +r($sm)
+    grid-template-columns: repeat(2, 1fr)
+.six-column-block
+  grid-template-columns: repeat(6, 1fr)
+  +r($sm)
+    grid-template-columns: repeat(2, 1fr)
+.information-block
+  .two-column-block, .three-column-block, .four-column-block, .six-column-block
+    grid-column: 1/-1
+
+    margin-bottom: 0
+    +aProp(margin-top, 50)
+    +r($sm)
+      margin-top: 20px
+.circleBanner
+  &.inView
+    .circleBanner__desktop svg .circle
+      animation-play-state: running
+  .circleBanner__mobile, .circleBanner__desktop
+    width: 100%
+    height: auto
+    +aProp(margin-bottom, 200)
+
+    +r($sm)
+      margin-bottom: 60px
+  img.circleBanner__mobile
+    display: none
+    +r($sm)
+      display: block
+  .circleBanner__desktop
+    display: block
+    +r($sm)
+      display: none
+    svg
+      .circle
+        opacity: 0.001
+        animation: .65s ease-out forwards paused
+        animation-name: circleBanner
+      .circle:nth-of-type(1)
+        animation-delay: 0.1s
+      .circle:nth-of-type(2)
+        animation-delay: 0.4s
+      .circle:nth-of-type(3)
+        animation-delay: 0.7s
+@keyframes circleBanner
+  from
+    opacity: 0.001
+  to
+    opacity: 0.999
+
+.full-width-img
+  width: 100%
+  height: auto
+  &.rounded
+    +aProp(border-radius, 24)
+    +r($sm)
+      border-radius: 24px
+
+.full-width-video
+  width: 100%
+  height: auto
+  &.rounded
+    +aProp(border-radius, 24)
+    +r($sm)
+      border-radius: 24px
+
+.page-container > .full-width-img
+  +aProp(margin-bottom, 200)
+  +r($sm)
+    margin-bottom: 60px
+
+.loading-icon
+  display: none
+  z-index: 15
+  position: absolute
+  // display: block
+  svg, img
+    height: auto
+
+    width: 100%
+  &.visible
+    display: block
+
+
+
+.person-banner-block
+  background-color: #131313
+  +aProp(border-radius, 24)
+  display: grid
+  grid-template-columns: 1fr 1fr
+  
+  +aMargin(200, 0)
+  +r($sm)
+    grid-template-columns: 1fr
+    margin: 40px 0
+    border-radius: 24px
+  .person-banner__title
+    +aProp(padding-left, 30)
+    +aProp(padding-top, 30)
+    grid-area: 1/1/2/2
+    align-self: flex-start
+    +r($sm)
+      grid-area: auto
+      padding-left: 13px
+      padding-top: 13px
+      
+  .person-banner__subtitle
+    +aProp(padding-left, 30)
+    +aProp(padding-bottom, 30)
+    grid-area: 2/1/3/2
+    align-self: flex-end
+    +r($sm)
+      grid-area: auto
+      padding-left: 30px
+      padding-bottom: 30px
+      position: absolute
+      bottom: 0
+      left: 0
+    *
+      color: #fff
+  .person-banner__img
+    grid-area: 1/2/3/-1
+    +r($sm)
+      grid-area: auto
+      justify-self: flex-end
+    img
+      width: 100%
+      +aProp(border-bottom-right-radius, 24)
+      +r($sm)
+        border-bottom-right-radius: 24px
+
+.ul-block
+  display: grid
+  grid-template-columns: 1fr 50%
+  +aMargin(200, 0)
+  +r($sm)
+    margin: 40px 0
+    grid-template-columns: 1fr
+  .ul-block__title
+    grid-area: 1/1/2/2
+    @extend .h2
+    +r($sm)
+      margin-bottom: 24px
+      grid-area: auto
+  .ul-block__list
+    display: flex
+    flex-direction: column
+    +aProp(gap, 24)
+    grid-area: 2/2/3/3
+    +r($sm)
+      gap: 16px
+      grid-area: auto
+    &._no-margin
+      +rmin($sm1)
+        grid-area: 1/2/3/3
+
+    .ul-block__line
+      position: relative
+      @extend .h2
+      +aProp(padding-left, 32)
+      +r($sm)
+        padding-left: 28px
+      .h3, h3
+        & + .h4, & + h4
+          +aProp(margin-top, 10)
+          +r($sm)
+            margin-top: 5px
+      .h4, h4
+        & + .h4, & + h4 
+          +aProp(margin-top, 22)
+          +r($sm)
+            margin-top: 14px
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23fff'/%3E%3Cpath stroke='%23000' stroke-linecap='round' stroke-width='1.5' d='m5.75 11.549 3.5 4.118 7-8.75'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: 100%
+        +aProp(height, 22)
+        +aProp(width, 22)
+        +r($sm)
+          height: 20px
+          width: 20px
+
+.video-blockBanner
+  width: 100%
+  height: 100vh 
+  +r($sm)
+    height: 0
+    padding-top: 100%
+    position: relative
+    margin-top: 96px
+  img, video 
+    object-fit: cover
+    width: 100% 
+    height: 100% 
+    +r($sm)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover

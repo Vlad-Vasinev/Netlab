@@ -1,0 +1,159 @@
+footer
+  width: 100%
+  +aPadding(0, 120, 60, 120)
+  +r($sm)
+    // display: none 
+    margin-top: 60px
+    padding: 0 15px 146px 15px
+  .footer-inner
+    width: 100%
+    display: flex
+    flex-direction: column
+    .static-slide
+      grid-template: 1fr
+      .static-slide__icon
+        +aProp(width, 48)
+        +aProp(height, 48)
+        
+        +r($sm)
+          width: 40px
+          height: 40px
+        img
+          border-radius: 0
+      .static-slide__title
+        +rmin($sm1)
+          grid-area: 2/1/3/-1
+          +aMargin(20, 0, 70, 0)
+        +r($sm)
+          &:last-child
+            margin-bottom: 17px
+    .four-column-block + .footer-bottom
+      +aProp(margin-top, 60)
+      +r($sm)
+        margin-top: 40px
+    .footer-bottom
+      display: flex
+      align-items: center
+      position: relative
+      display: grid
+      grid-template-columns: 1fr 0.5fr 1fr
+      +r($sm)
+        display: grid
+        grid-template-columns: 1fr
+        grid-auto-rows: auto
+      .home-button
+        cursor: pointer
+        grid-area: 1/2/2/3
+        margin: 0 auto
+        +r($sm)
+          grid-area: 1/1/2/-1
+        svg
+          +aProp(width, 57)
+          +aProp(height, 57)
+          display: block
+          +r($sm)
+            width: 51px
+            height: 51px
+      p
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 400
+        color: #4E4E4E
+        +aProp(font-size, 16)
+        +aProp(line-height, 22)
+        +r($sm)
+          font-size: 16px
+          line-height: 22px
+      .footer-credits
+        left: 50%
+        grid-area: 1/1/2/2
+        justify-self: flex-start
+        +r($sm)
+          grid-area: 2/1/3/-1
+          justify-self: center
+          text-align: center
+          position: static
+          transform: none
+          margin-top: 40px
+      .footer-policy
+        grid-area: 1/3/2/4
+        justify-self: flex-end
+        +r($sm)
+          grid-area: 3/1/4/-1
+          justify-self: center
+          margin-top: 36px
+
+.page.footer-hidden +  footer
+  display: none
+  +r($sm)
+    display: block
+    .footer-inner .four-column-block
+      display: none
+    .footer-inner .footer-bottom
+      margin: 0
+
+.nbl-footer 
+  background-color: #000000
+  height: 100vh
+  +r($sm)
+    height: unset
+  &__wrapper 
+    +aProp(padding, 16) 
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +r($sm)
+      padding: 12px 12px 94px 12px
+      gap: 60px 
+  &__title 
+    margin-bottom: aCalc(24)
+  &__top, &__bottom
+    display: flex
+  &__top
+    +r($sm)
+      order: 2
+      flex-direction: column
+      gap: 32px
+      padding-left: 32.8vw
+      padding-right: 38px
+    .nbl-footer__top-el 
+      +r($sm)
+        width: unset
+  &__middle 
+    +r($sm)
+      order: 1
+    .btn-3 
+      margin-left: 25.625vw
+      transform: translateY(-116%)
+      +r($sm)
+        transform: translateY(0)
+        margin-left: unset
+  &__top-el 
+    display: flex
+    flex-direction: column
+    width: aCalc(460)
+    +aProp(gap, 4) 
+    flex-shrink: 0
+    margin-right: aCalc(16)
+    &._notList 
+      display: block
+      width: max-content
+      margin-right: 9.3479166667vw
+      +r($sm)
+        display: none
+      img, svg 
+        width: aCalc(300)
+  &__bottom
+    display: flex
+    gap: aCalc(15)
+    +r($sm)
+      flex-direction: column
+      gap: 8px
+      order: 2
+    .h5 
+      width: 23.9583333333vw
+      a 
+        width: max-content
+      +r($sm)
+        width: unset

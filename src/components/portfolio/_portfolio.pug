@@ -1,0 +1,72 @@
+- var srcWebm = "img/new/main-video.webm"
+- var srcMp4 = "img/new/main-video.mp4"
+
+include ../components/nbl-fixed
+
+.page-container
+
+  .nbl-bigBlock._marginTop
+    .nbl-projects
+      .nbl-linksSm._contentList
+        .nbl-linksSm__item 
+          a.h2.nbl-textAnimation(href="#") New
+        .nbl-linksSm__item 
+          a.h2.nbl-textAnimation(href="#") Websites
+        .nbl-linksSm__item 
+          a.h2.nbl-textAnimation(href="#") Applications
+        .nbl-linksSm__item 
+          a.h2.nbl-textAnimation(href="#") Services
+        .nbl-linksSm__item 
+          a.h2.nbl-textAnimation(href="#") Advertisement
+        .nbl-linksSm__item 
+          a.h2.nbl-textAnimation(href="#") Content creation
+      .nbl-projects__wrapper
+        .nbl-project(js-modal-open data-modal-name='caseModal' data-modal-url='api/case2.xml'  data-modal-title="Linktech app" data-modal-background='#F2F2F2')
+          .nbl-project__img
+            img(src="img/new/nbl-project.jpg" alt="")
+            .nbl-project__mesh 
+              .nbl-project__icons 
+                include ../nbl-projectIcon/_nbl-projectIcon
+                include ../nbl-projectIcon/_nbl-projectIconSmall
+              .nbl-project__icons 
+                include ../nbl-projectIcon/_nbl-projectIconSmall
+                include ../nbl-projectIcon/_nbl-projectIcon
+                //- include ../nbl-projectIcon/_nbl-projectIconSmall
+              .nbl-project__icons 
+                include ../nbl-projectIcon/_nbl-projectIcon
+                include ../nbl-projectIcon/_nbl-projectIconSmall
+          .nbl-project__info 
+            .h3.nbl-textAnimation Linktech app
+            .h7 development / support / creatives
+        .nbl-project( js-modal-open data-modal-name='caseModal' data-modal-url='api/case2.xml'  data-modal-title="Linktech app" data-modal-background='#F2F2F2' )
+          .nbl-project__img
+            <video class="" loop muted="muted" autoplay="autoplay" playsinline webkit-playsinline preload="auto" poster="img/new/escape2.png">
+              <source src="img/new/escape.webm" type="video/webm">
+              <source src="img/new/escape.mp4" type="video/mp4">
+            </video>
+            .nbl-project__mesh 
+              .nbl-project__icons 
+                include ../nbl-projectIcon/_nbl-projectIconSmall
+                include ../nbl-projectIcon/_nbl-projectIcon
+          .nbl-project__info 
+            .h3.nbl-textAnimation DoBuy shop
+            .h7 development / support / creatives
+        .nbl-projects__small 
+          .nbl-project(js-modal-open data-modal-name='caseModal' data-modal-url='api/case3.xml'  data-modal-title="Linktech app" data-modal-background='#F2F2F2')
+            .nbl-project__img
+              img(src="img/new/agave-preview.jpg" alt="")
+              .nbl-project__mesh 
+                .nbl-project__icons 
+                  include ../nbl-projectIcon/_nbl-projectIcon
+            .nbl-project__info 
+              .h3.nbl-textAnimation Linktech app
+              .h7 branding / video content / 3D modeling / website development
+          .nbl-project(js-modal-open data-modal-name='caseModal' data-modal-url='api/case3.xml'  data-modal-title="Linktech app" data-modal-background='#F2F2F2')
+            .nbl-project__img
+              <video class="" loop muted="muted" autoplay="autoplay" playsinline webkit-playsinline preload="auto" poster="img/new/escape2.png">
+                <source src="img/new/escape.webm" type="video/webm">
+                <source src="img/new/escape.mp4" type="video/mp4">
+              </video>
+            .nbl-project__info 
+              .h3.nbl-textAnimation Linktech app
+              .h7 3D modeling / support

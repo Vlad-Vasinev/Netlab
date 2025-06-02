@@ -1,0 +1,58 @@
+
+.nbl-clipPopup
+  width: max-content  
+  padding: aCalc(5) aCalc(8)
+  background-color: #2D2D2D
+  display: grid
+  justify-content: center
+  align-items: center
+  border-radius: aCalc(4)
+  position: absolute
+  bottom: aCalc(-10)
+  top: auto
+  let: 0 
+  right: 0
+  margin: 0 auto
+  transition: transform .3s, opacity .3s
+  opacity: 0
+  z-index: 2
+  &._active 
+    opacity: 1
+    transform: translateX(0)
+  &.dp
+    top: aCalc(50)
+    bottom: unset
+    left: calc(var(--popup-width))
+    z-index: 2
+    height: auto
+    transform: translateY(-20%)
+    +r($sm)
+      top: 40px
+      display: none
+    &::before 
+      content: ""
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0L9.24264 4.24264H5H0.757359L5 0Z' fill='%232D2D2D'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      width: 11px
+      height: 6px
+      transform: scale(2) translateX(-25%)
+      position: absolute
+      left: 50%
+      top: aCalc(-2)
+  &.icons 
+    z-index: 1
+    bottom: unset 
+    left: aCalc(60)
+    top: 50%
+    transform: translateY(-50%) translateX(-10%)
+    margin: unset
+    display: flex
+    &::before 
+      content: ""
+      background-image: url("data:image/svg+xml,%3Csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4.24268L4.24264 3.51667e-05V4.24268V8.48532L0 4.24268Z' fill='%232D2D2D'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      width: 6px
+      height: 8px
+      transform: scale(2)
+      position: absolute
+      left: -3px

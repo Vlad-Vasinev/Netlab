@@ -1,0 +1,32 @@
+
+.nbl-transfText
+  margin: 0 auto
+  width: max-content
+  width: 68.0520833333vw
+  position: absolute
+  bottom: aCalc(40)
+  left: 25.3vw
+  +r($sm)
+    left: 0
+    //position: unset
+    width: 100%
+    padding: 0 30px
+  .nbl-transfText__el
+    overflow: hidden
+    p 
+      animation: transfText 
+      animation-duration: 1.7s
+      transition: transform cubic-bezier(0.3, 0.395, 0.4, 0.5)
+    &:hover 
+      p 
+        transform: translateY(0)
+    &:nth-child(1)
+      p 
+        animation: transfText 
+        animation-duration: 1.5s
+
+@keyframes transfText 
+  from 
+    transform: translateY(150%)
+  to 
+    transform: translateY(0)

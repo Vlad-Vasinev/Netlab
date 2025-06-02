@@ -1,0 +1,166 @@
+/* UI */
+
+// input
+
+input, textarea, .textarea[contenteditable]
+  font-family: $baseFont
+  border-radius: 0
+
+.grecaptcha-badge
+  display: none !important
+
+.ui-input, .ui-input-select
+  position: relative
+  +aProp(height, 52)
+  +r($sm)
+    height: 43px
+  &.ui-textarea
+    height: 112px
+  &__float-label
+    position: absolute
+    left: 0
+    +aProp(top, 18)
+    +aProp(font-size, 16)
+    +aProp(line-height, 22)
+    pointer-events: none
+    color: $Black
+    transition: 0.25s ease
+    +r($sm)
+      top: 16px
+      font-size: 16px
+      line-height: 22px
+    span.required
+      color: #f45b63
+  &__search-icon
+    position: absolute
+    background: transparent
+    +aProp(top, 17)
+    +aProp(right, 17)
+    +r($sm)
+      top: 17px
+      right: 17px
+      
+    svg
+      fill: #247eca
+      +aProp(size, 22)
+      +r($sm)
+        size: 22px
+  &__sub-icon
+    position: absolute
+    background: #247eca
+    top: 0
+    right: 0
+    height: 100%
+    +aProp(width, 56)
+    +aProp(border-top-right-radius, 12)
+    +aProp(border-bottom-right-radius, 12)
+    +r($sm)
+      width: 56px
+      border-top-right-radius: 12px
+      border-bottom-right-radius: 12px
+    svg
+      +aProp(size, 22)
+      +r($sm)
+        size: 22px
+      fill: #fff
+  input, textarea, .textarea[contenteditable]
+    -webkit-appearance: none
+    display: block
+    width: 100%
+    height: 100%
+    background: #fff
+    border: none
+    //border-radius: 6px
+    box-shadow: none
+    color: currentColor
+    font-family: $baseFont
+    +aProp(font-size, 16)
+    +aProp(line-height, 22)
+    +aPadding(16, 0, 10, 0)
+    border-bottom: 1px solid $Black
+    +r($sm)
+      padding: 16px 0 6px 0  
+      font-size: 14px
+      line-height: 20px
+    &::placeholder
+      color: currentColor
+    &.has-error
+      border-bottom: 1px solid #FF7777
+    &.is-valid
+      //border-color: #5ad321
+  .ui-input__error
+    font-weight: 500
+    +aProp(font-size, 16)
+    +aProp(line-height, 22)
+    color: #fd566b
+    position: absolute
+    +aProp(margin-top, 8)
+    +r($sm)
+      margin-top: 2px
+      // padding: 20px 0 10px 0  
+      font-size: 14px
+      line-height: 20px
+
+  &.is-focused
+    .ui-input__float-label
+      top: 0px
+      +aProp(font-size, 13)
+      +aProp(line-height, 16)
+      opacity: 0.5
+      +r($sm)
+        font-size: 13px
+        line-height: 16px
+
+.inputs-container-inline
+  display: flex
+  flex-wrap: nowrap
+  +aProp(gap, 17)
+  .ui-input
+    gap: 17px
+    flex: 0 3 auto
+a.orange-button
+  display: flex
+
+.input-area
+  position: relative
+  display: flex
+  input
+    flex-grow: 1
+    height: 42px
+    border: none
+    padding: 0
+    border-bottom: 1px solid #4f4f4f
+    // transition: border-color $delay
+    &:hover
+      // border-color: $c-a
+    &::placeholder
+      color: #828282
+
+.input-area2
+  display: flex
+  flex-direction: column
+  span
+    font-size: 12px
+    margin-bottom: 8px
+  input
+    flex-grow: 1
+    height: 48px
+    font-size: 12px
+    border: none
+    padding: 0 16px
+    border-radius: 3px
+    background-color: #f2f2f2
+
+.nbl-title
+  margin-bottom: aCalc(40)
+  +r($sm)
+    margin-bottom: 24px
+
+@keyframes ui-rotate
+  to
+    transform: rotate(360deg)
+
+@keyframes ui-grow
+  50%
+    transform: scale(1)
+

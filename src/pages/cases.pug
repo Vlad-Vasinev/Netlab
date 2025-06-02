@@ -1,0 +1,11 @@
+extends ./shared/_layout
+block content
+  include ../components/cases-page/_cases
+block meta
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Кейс">
+  <meta property="og:description" content="Описание кейса">
+  <meta property="og:url" content="https://netlab-com.ru/cases/schneider-electric/">
+  <meta property="og:image" content="img/projectSliderImg1.png">
+block jsond 
+  include ./shared/_jsond-case.html

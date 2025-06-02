@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 60" xmlns:xlink="http://www.w3.org/1999/xlink" class="Playground__svg" style="">
+  <defs>
+    <filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox"
+      primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+      <feGaussianBlur stdDeviation="2.5 2.5" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none"
+        result="blur"></feGaussianBlur>
+      <feComponentTransfer x="0%" y="0%" width="100%" height="100%" in="blur" result="componentTransfer">
+        <feFuncR type="identity"></feFuncR>
+        <feFuncG type="identity"></feFuncG>
+        <feFuncB type="identity"></feFuncB>
+        <feFuncA type="discrete" tableValues="0 1"></feFuncA>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <svg filter="url(#filter)" viewBox="0 0 144 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <circle cx="24" cy="30" r="8" fill="#080808">
+      <animateTransform attributeName="transform" dur="2.8s" keyTimes="0; 0.5; 1" repeatCount="indefinite"
+        type="translate" values="0 0; 96 0; 0 0;" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1">
+      </animateTransform>
+    </circle>
+    <g>
+      <animateTransform attributeName="transform" dur="2.8s" keyTimes="0; 0.5; 1" repeatCount="indefinite"
+        type="translate" values="0 0; -32 0; 0 0;" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1">
+      </animateTransform>
+      <circle cx="56" cy="30" r="8" fill="#080808"></circle>
+      <circle cx="88" cy="30" r="8" fill="#080808"></circle>
+      <circle cx="120" cy="30" r="8" fill="#080808"></circle>
+    </g>
+  </svg>
+</svg>
+

@@ -1,0 +1,41 @@
+.information-block(js-show-in-viewport)
+  .information-block__header
+    h2.flipping-text(js-show-in-viewport)
+      .flipping-text__container
+        | Clients
+  .information-block__description 
+    p Хороший инструмент — это половина успеха. Именно поэтому мы следим за новинками и меняем инструменты, когда появляются более умные, быстрые и целенаправленные сервисы.
+  .information-block-clients-slider(information-block-client-slider)
+    .swiper-wrapper
+      .swiper-slide.information-block-clients-slider__item(js-modal-open data-modal-name='caseModal' data-modal-url='https://catfact.ninja/fact'  data-modal-title="Кейс0")
+        .information-block-clients-slider__item-inner
+          .information-block-clients-slider__logo
+            img(src="img/wideLogo1.svg" alt="")
+          .information-block-clients-slider__description
+            p Проектирование и разработка панели управления, поддержка и развитие проекта
+          //- Блок без стрелки
+      .swiper-slide.information-block-clients-slider__item(js-modal-open data-modal-name='caseModal' data-modal-url='https://catfact.ninja/fact'  data-modal-title="Кейс0")
+        .information-block-clients-slider__item-inner
+          .information-block-clients-slider__logo
+            img(src="img/wideLogo1.svg" alt="")
+          .information-block-clients-slider__description
+            p Проектирование и разработка панели управления, поддержка 
+          .link-button-bottom-block
+            .link-button-bottom-block__text 15 продуктов 
+            svg.link-button-bottom-block__button(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none' viewBox='0 0 50 50')
+              circle(cx='25' cy='25' r='25' fill='#080808')
+              path(fill='#fff' fill-rule='evenodd' d='M32.2377 17.0077H20.3809V16H34v13.6123h-1.0082V17.6814L16.6961 33 16 32.271l16.2377-15.2633Z')
+      - var i = 0
+      while i < 4
+        .swiper-slide.information-block-clients-slider__item(js-modal-open data-modal-name='caseModal' data-modal-url='https://catfact.ninja/fact'  data-modal-title="Кейс0")
+          .information-block-clients-slider__item-inner
+            .information-block-clients-slider__logo
+              img(src="img/wideLogo1.svg" alt="")
+            .information-block-clients-slider__description
+              p Проектирование и разработка панели управления, поддержка и развитие проекта
+            .link-button-bottom-block
+              .link-button-bottom-block__text 15 продуктов 
+              svg.link-button-bottom-block__button(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none' viewBox='0 0 50 50')
+                circle(cx='25' cy='25' r='25' fill='#080808')
+                path(fill='#fff' fill-rule='evenodd' d='M32.2377 17.0077H20.3809V16H34v13.6123h-1.0082V17.6814L16.6961 33 16 32.271l16.2377-15.2633Z')
+        - i++

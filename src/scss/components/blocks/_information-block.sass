@@ -1,0 +1,30 @@
+.flipping-text
+  perspective: 4em
+
+  perspective-origin: bottom
+  width: fit-content
+  .flipping-text__container
+    display: block
+    width: fit-content
+    animation: flipping-text 1.05s cubic-bezier(.215,.61,.355,1)
+    animation-fill-mode: forwards
+    animation-play-state: paused
+    animation-delay: 0.3s
+
+    transform-origin: center bottom
+    opacity: .001
+    transform: rotateX(90deg) translate3d(0,90px,0)
+    +r($sm)
+      animation-duration: 0.75s
+      animation-delay: 0.2s
+  &.inView
+    .flipping-text__container
+      animation-play-state: running
+
+@keyframes flipping-text
+  from
+    opacity: .001
+    transform: rotateX(90deg) translate3d(0,90px,0)
+  to
+    opacity: .999
+    transform: rotateX(0deg) translate3d(0,0,0)

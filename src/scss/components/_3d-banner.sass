@@ -1,0 +1,15 @@
+.banner-3d
+  +aProp(height, 280)
+
+  width: 100%
+  background-color: transparent
+  opacity: 0.0001
+  transition: opacity 0.4s 0.4s ease
+  +r($sm)
+    height: 140px
+
+  &._inited
+    opacity: 0.9999
+
+canvas
+  display: block

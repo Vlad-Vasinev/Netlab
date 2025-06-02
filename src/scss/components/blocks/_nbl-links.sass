@@ -1,0 +1,37 @@
+
+.nbl-links 
+  display: flex
+  flex-direction: column
+  gap: aCalc(16)
+  +r($sm)
+    gap: 12px
+  .nbl-links__item 
+    cursor: pointer
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    padding-bottom: aCalc(16)
+    +r($sm)
+      padding-bottom: 12px
+
+.nbl-linksSm 
+  display: flex
+  flex-direction: row
+  gap: aCalc(24)
+  &._contentList 
+    margin-bottom: aCalc(80)
+    +r($sm)
+      margin-bottom: 24px
+      gap: 16px
+      overflow-x: scroll
+    .nbl-linksSm__item 
+      +r($sm)
+        flex-shrink: 0
+    &._double 
+      margin-bottom: aCalc(60)
+      +r($sm)
+        margin-bottom: 24px
+      .nbl-linksSm__item 
+        +r($sm)
+          flex-shrink: 0
+  .nbl-links__item
+    border-bottom: none
+    padding-bottom: unset

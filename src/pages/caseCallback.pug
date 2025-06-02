@@ -1,0 +1,9 @@
+extends ./shared/_layout
+block head 
+  script.
+    document.addEventListener("DOMContentLoaded", ()=>{
+      window.openCaseModal('api/case2.xml', 'title');  
+    }, {once: true});
+
+block content
+  include ../components/cases-page/_cases

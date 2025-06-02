@@ -1,0 +1,47 @@
+- 
+  var hArr = [
+    'Техобслуживание',
+    'В гармонии с природой', 
+    '5 причин построить дом из Кедра', 
+    'Протопи ты мне баньку по-белому...', 
+    'Сколько домкратов бывает в...', 
+    ]
+.stories
+  .stories-inner
+    each text, i in hArr
+      .stories-item(data-video-src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' data-img-src='img/projectSliderImg.png')
+        .img.stories-item-preview
+          img(src='img/projectSliderImg.png')
+        .stories-item-desc
+          span=text
+template.stories-fs-tpl
+  .stories-fs
+    .stories-fs-bg
+    .stories-fs-inner
+      button.mute-button.button_small Включить звук
+      .stories-fs-wrapper.swiper-wrapper
+      .slider-navigation
+        .swiper-pagination.slider-navigation__pagination
+        .slider-navigation__prev
+          .slider-navigation-prev.slide-button.slide-button_horizontal
+            span 
+              svg(width='41' height='26' viewBox='0 0 41 26' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M41 13L2 13M2 13L14.1875 0.999998M2 13L14.1875 25' stroke='white' stroke-width='1.5')
+        .slider-navigation__next
+          .slider-navigation-next.slide-button.slide-button_horizontal
+            span 
+              svg(width='41' height='26' viewBox='0 0 41 26' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M41 13L2 13M2 13L14.1875 0.999998M2 13L14.1875 25' stroke='white' stroke-width='1.5')
+      .pagination-container
+    .close-btn
+      svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+        path(fill='#fff' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+        path(fill='#fff' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+template.stories-fs-item-tpl-video
+  .stories-fs-item.swiper-slide
+    .stories-fs-item-video(stories-js-video)
+      .stories-fs-item-preview(stories-js-preview)
+    .stories-fs-item-desc
+      h4(stories-js-desc)
+
+template.stories-fs-item-tpl-img

@@ -1,0 +1,151 @@
+// width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=ro($width, $orientation: landscape)
+  @media only screen and (max-width: $width+ "px") and (orientation: $orientation)
+    @content
+
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+// height
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rhmin($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+
+$maxWidth: 3840
+$maxWidthContiner: 1920
+$minWidth: 1280
+
+// размер как в макете
+@mixin aProp($property, $startSize)
+  $minSize: ($startSize / 1920 ) * 1280
+  $addSize: $startSize - $minSize
+  //@media ( min-width: #{$maxWidthContiner + px})
+  #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+@function aCalc($startSize)
+  $minSize: ($startSize / 1920 ) * 1280
+  $addSize: $startSize - $minSize
+  $result: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+  @return $result
+
+@mixin aPadding($startSizeTop: undefined, $startSizeRight: undefined, $startSizeBottom: undefined, $startSizeLeft: undefined)
+  @if $startSizeTop != undefined and $startSizeRight != undefined and $startSizeBottom != undefined and $startSizeLeft != undefined
+    // adaptiveM: 1
+    @if $startSizeTop != undefined
+      $minSizeTop: ($startSizeTop / 1920 ) * 1280
+      $addSizeTop: $startSizeTop - $minSizeTop
+      padding-top: calc(#{$minSizeTop + px} + #{$addSizeTop} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    @if $startSizeRight != undefined
+      $minSizeRight: ($startSizeRight / 1920 ) * 1280
+      $addSizeRight: $startSizeRight - $minSizeRight
+      padding-right: calc(#{$minSizeRight + px} + #{$addSizeRight} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    @if $startSizeBottom != undefined
+      $minSizeBottom: ($startSizeBottom / 1920 ) * 1280
+      $addSizeBottom: $startSizeBottom - $minSizeBottom
+      padding-bottom: calc(#{$minSizeBottom + px} + #{$addSizeBottom} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    @if $startSizeLeft != undefined
+      $minSizeLeft: ($startSizeLeft / 1920 ) * 1280
+      $addSizeLeft: $startSizeLeft - $minSizeLeft
+      padding-left: calc(#{$minSizeLeft + px} + #{$addSizeLeft} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+    @else if $startSizeTop != undefined and $startSizeRight != undefined and $startSizeBottom != undefined
+
+    // adaptiveM: 2
+    $minSizeTop: ($startSizeTop / 1920 ) * 1280
+    $addSizeTop: $startSizeTop - $minSizeTop
+    padding-top: calc(#{$minSizeTop + px} + #{$addSizeTop} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeRight: ($startSizeRight / 1920 ) * 1280
+    $addSizeRight: $startSizeRight - $minSizeRight
+    padding-right: calc(#{$minSizeRight + px} + #{$addSizeRight} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeBottom: ($startSizeBottom / 1920 ) * 1280
+    $addSizeBottom: $startSizeBottom - $minSizeBottom
+    padding-bottom: calc(#{$minSizeBottom + px} + #{$addSizeBottom} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+  @else if $startSizeTop != undefined and $startSizeRight != undefined
+
+    // adaptiveM: 3
+    $minSizeTop: ($startSizeTop / 1920 ) * 1280
+    $addSizeTop: $startSizeTop - $minSizeTop
+    padding-top: calc(#{$minSizeTop + px} + #{$addSizeTop} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeRight: ($startSizeRight / 1920 ) * 1280
+    $addSizeRight: $startSizeRight - $minSizeRight
+    padding-right: calc(#{$minSizeRight + px} + #{$addSizeRight} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeBottom: ($startSizeTop / 1920 ) * 1280
+    $addSizeBottom: $startSizeTop - $minSizeBottom
+    padding-bottom: calc(#{$minSizeBottom + px} + #{$addSizeBottom} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeLeft: ($startSizeRight / 1920 ) * 1280
+    $addSizeLeft: $startSizeRight - $minSizeLeft
+    padding-left: calc(#{$minSizeLeft + px} + #{$addSizeLeft} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+@mixin aMargin($startSizeTop: undefined, $startSizeRight: undefined, $startSizeBottom: undefined, $startSizeLeft: undefined)
+  @if $startSizeTop != undefined and $startSizeRight != undefined and $startSizeBottom != undefined and $startSizeLeft != undefined
+    // adaptiveM: 1
+    @if $startSizeTop != undefined
+      $minSizeTop: ($startSizeTop / 1920 ) * 1280
+      $addSizeTop: $startSizeTop - $minSizeTop
+      margin-top: calc(#{$minSizeTop + px} + #{$addSizeTop} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    @if $startSizeRight != undefined
+      $minSizeRight: ($startSizeRight / 1920 ) * 1280
+      $addSizeRight: $startSizeRight - $minSizeRight
+      margin-right: calc(#{$minSizeRight + px} + #{$addSizeRight} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    @if $startSizeBottom != undefined
+      $minSizeBottom: ($startSizeBottom / 1920 ) * 1280
+      $addSizeBottom: $startSizeBottom - $minSizeBottom
+      margin-bottom: calc(#{$minSizeBottom + px} + #{$addSizeBottom} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    @if $startSizeLeft != undefined
+      $minSizeLeft: ($startSizeLeft / 1920 ) * 1280
+      $addSizeLeft: $startSizeLeft - $minSizeLeft
+      margin-left: calc(#{$minSizeLeft + px} + #{$addSizeLeft} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+    @else if $startSizeTop != undefined and $startSizeRight != undefined and $startSizeBottom != undefined
+
+    // adaptiveM: 2
+    $minSizeTop: ($startSizeTop / 1920 ) * 1280
+    $addSizeTop: $startSizeTop - $minSizeTop
+    margin-top: calc(#{$minSizeTop + px} + #{$addSizeTop} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeRight: ($startSizeRight / 1920 ) * 1280
+    $addSizeRight: $startSizeRight - $minSizeRight
+    margin-right: calc(#{$minSizeRight + px} + #{$addSizeRight} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeBottom: ($startSizeBottom / 1920 ) * 1280
+    $addSizeBottom: $startSizeBottom - $minSizeBottom
+    margin-bottom: calc(#{$minSizeBottom + px} + #{$addSizeBottom} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+  @else if $startSizeTop != undefined and $startSizeRight != undefined
+
+    // adaptiveM: 3
+    $minSizeTop: ($startSizeTop / 1920 ) * 1280
+    $addSizeTop: $startSizeTop - $minSizeTop
+    margin-top: calc(#{$minSizeTop + px} + #{$addSizeTop} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeRight: ($startSizeRight / 1920 ) * 1280
+    $addSizeRight: $startSizeRight - $minSizeRight
+    margin-right: calc(#{$minSizeRight + px} + #{$addSizeRight} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeBottom: ($startSizeTop / 1920 ) * 1280
+    $addSizeBottom: $startSizeTop - $minSizeBottom
+    margin-bottom: calc(#{$minSizeBottom + px} + #{$addSizeBottom} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))
+
+    $minSizeLeft: ($startSizeRight / 1920 ) * 1280
+    $addSizeLeft: $startSizeRight - $minSizeLeft
+    margin-left: calc(#{$minSizeLeft + px} + #{$addSizeLeft} * ((100vw - #{$minWidth + px}) / #{$maxWidthContiner - $minWidth}))

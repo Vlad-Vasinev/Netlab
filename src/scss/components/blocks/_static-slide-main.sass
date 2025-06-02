@@ -1,0 +1,169 @@
+.static-slide
+  display: grid
+  grid-template-rows: min-content 1fr
+  grid-template-columns: min-content 1fr
+
+  +aProp(padding, 30)
+  width: auto
+
+  +aProp(border-radius, 24)
+  // background-color: #1A1A1A
+  background-color: #0F0F0F
+  transition: background-color 0.4s
+  +r($sm)
+
+    grid-area: auto
+    border-radius: 24px
+    padding: 13px
+    grid-template-columns: 1fr
+    grid-auto-rows: max-content
+    grid-template-rows: min-content min-content min-content 1fr
+
+  &__icon
+    grid-area: 1 / 1 / 2 / 2
+    +aProp(width, 72)
+    +aProp(height, 72)
+    +r($sm)
+      grid-area: auto
+      width: 48px
+      height: 48px
+    img
+      width: 100%
+      height: 100%
+      // +aProp(border-radius, 20)
+      +r($sm)
+        // border-radius: 18px
+  &__title
+    @extend .h3
+    font-style: normal
+    font-weight: 400
+
+    +aProp(margin-left, 20)
+    align-self: center
+    white-space: nowrap
+    grid-area: 1 / 2 / 2 / 3
+    +r($sm)
+      text-align: left
+      align-self: flex-start
+      white-space: normal
+      grid-area: auto
+      margin-top: 15px
+      margin-left: 0
+  &__list
+    grid-area: 2 / 1 / 3 / 3
+    margin: 0
+    padding: 0
+    +aProp(margin-top, 30)
+    +r($sm)
+      margin-top: 5px
+      grid-area: auto
+    li
+      @extend .h4
+      color: #9C9C9C
+      display: block
+      padding: 0
+      margin: 0
+      font-weight: 400
+      
+      text-align: left
+      +r($sm)
+      
+        margin: 0
+      & + li
+        +aProp(margin-top, 10)
+        +r($sm)
+          margin-top: 5px
+  &__desc
+    grid-column: 1 / -1
+    +aProp(margin-top, 30)
+    +r($sm)
+      margin-top: 5px
+
+      grid-row: auto
+    &:last-child
+      +r($sm)
+        margin-bottom: 17px
+    p
+      @extend .h5
+      text-align: left
+      color: #9C9C9C
+  &__count
+    @extend .h3
+    color: #9C9C9C
+    align-self: center
+    grid-column: 3 / -1
+    +r($sm)
+      grid-column: 1 / -1
+      justify-self: flex-end
+      margin-top: 51px
+      grid-row: auto
+
+.static-slide
+  &._column
+    // --shadow-color: rgba(19, 42, 52, 0.7)
+    --shadow-color: #132a34B2
+    cursor: pointer
+
+    +rmin($sm1)
+      +aPadding(40, 24, 40, 24)
+      justify-items: center
+      background-color: #0000
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        z-index: -1
+        width: 100%
+        top: 0
+        height: 100%
+        transition: transform 0.4s ease
+        border-radius: inherit
+        background-color: #0F0F0F
+    +r($sm)
+      padding-top: 20px
+      padding-bottom: 20px
+  &._column &__icon
+    +rmin($sm1)
+      +aProp(width, 96)
+      +aProp(height, 96)
+      +aProp(--shadow-x, 12)
+      +aProp(--shadow-blur, 16)
+      +aProp(--shadow-spread, 2)
+      position: relative
+      z-index: 1
+      transition: transform 0.4s ease
+      &::after
+        content: ''
+        position: absolute
+        z-index: -1
+        width: 100%
+        top: 0
+        height: 100%
+        opacity: 0
+        +aProp(border-radius, 26)
+        transition: opacity 0.4s ease
+        box-shadow: 0px var(--shadow-x) var(--shadow-blur) var(--shadow-spread) var(--shadow-color)
+      img
+    +r($sm)
+      justify-self: center
+      width: 62px
+      height: 62px
+  &._column &__title
+    +rmin($sm1)
+      +aProp(margin-top, 30)
+    +r($sm)
+      margin-top: 16px
+      text-align: center
+  &._column &__desc
+    +rmin($sm1)
+      *
+        text-align: center
+    +r($sm)
+      display: none
+  &._column:hover &__icon
+    +hover
+      transform: translateY(-5%)
+      &::before
+        transform: scale(0.939)
+      &::after
+        opacity: 1

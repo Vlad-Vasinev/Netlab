@@ -1,0 +1,55 @@
+.slider-arrow-navigation
+  height: 0
+  width: 100%
+  z-index: 10
+  
+  grid-area: 3/1/4/3
+  justify-self: flex-start
+  align-self: center
+  position: relative
+  +aProp(left, -28)
+  top: 0
+  +aProp(--half, 56)
+  width: calc(100% + var(--half))
+  +r($sm)
+    display: none
+  svg 
+    +aProp(width, 56)
+    height: auto
+    aspect-ratio: 1
+    border-radius: 50%
+    +no-drag
+  .slider-arrow-navigation__prev, .slider-arrow-navigation__next
+    position: absolute
+    cursor: pointer
+    background: rgba(72, 72, 72, 0.8)
+    backdrop-filter: blur(4px)
+    border-radius: 50%
+    aspect-ratio: 1
+    transition: background 0.3s ease, opacity 0.2s ease
+    opacity: 0
+
+    &.swiper-button-disabled
+      background: rgba(37, 37, 37, 0.8)
+      // opacity: 0
+      cursor: normal
+    &:hover
+      opacity: 1
+    &:hover:not(.swiper-button-disabled)
+      background: rgba(107, 107, 107, 0.8)
+  .slider-arrow-navigation__prev
+    left: 0
+  .slider-arrow-navigation__next
+    right: 0
+.information-block-slider + .slider-arrow-navigation
+  align-self: flex-start
+  .slider-arrow-navigation__prev, .slider-arrow-navigation__next
+    +aProp(top, 152)
+.information-block-clients-slider + .slider-arrow-navigation
+  align-self: flex-start
+  .slider-arrow-navigation__prev, .slider-arrow-navigation__next
+    +aProp(top, 208)  
+  
+.information-block-slider:hover + .slider-arrow-navigation, .information-block-clients-slider:hover + .slider-arrow-navigation
+  .slider-arrow-navigation__prev, .slider-arrow-navigation__next
+    opacity: 1

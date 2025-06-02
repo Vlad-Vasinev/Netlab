@@ -1,0 +1,119 @@
+.blog-posts
+  width: 100%
+  display: grid
+  grid-template-columns: 1fr 1fr
+  +aProp(gap, 5)
+  +aProp(margin-bottom, 200)
+  +r($sm)
+    grid-template-columns: 1fr
+    gap: 5px
+    margin-bottom: 140px
+
+.blog-posts-item
+  background-color: #1A1A1A
+  +aProp(border-radius, 24)
+  display: none
+  grid-template-columns: 1fr
+  +r($sm)
+    border-radius: 24px
+  &._visible
+    display: grid
+  .blog-posts-item__cover
+    width: 100%
+    img
+      width: 100%
+      +aProp(border-radius, 16)
+      +r($sm)
+        border-radius: 16px
+
+  .blog-posts-item__desc
+    +aProp(padding, 30)
+    +r($sm)
+      padding: 13px
+  .blog-posts-item__title
+    p
+      +aProp(font-size, 16)
+      +aProp(line-height, 22)
+      +r($sm)
+        font-size: 16px
+        line-height: 22px
+  .link-button-bottom-block
+
+.blog-filter-block
+  +aMargin(50, 0)
+
+  width: 100%
+  +r($sm)
+    width: auto
+    margin: 30px -15px
+    overflow: scroll
+    +hideScroll
+
+    padding: 0 15px
+
+  .blog-filter-block__tags-container
+    width: fit-content
+    display: flex
+    white-space: nowrap
+    user-select: none
+    +aProp(gap, 10)
+    justify-content: center
+    +r($sm)
+
+      gap: 0
+
+    .blog-filter-block__tag
+
+      white-space: nowe
+
+      border: 1px solid #4D4D4D
+      +aProp(border-radius, 60)
+      +aPadding(16, 24)
+      +aProp(font-size, 16)
+      +aProp(line-height, 22)
+      transition: color 0.1s 0.1s, background-color 0.2s, border-color 0.2s
+      cursor: pointer
+
+      +r($sm)
+        border-radius: 60px
+        padding: 12px 16px
+        font-size: 14px
+        line-height: 18px
+      &._visible
+        display: block
+      &._active
+        border-color: #fff
+        background-color: #fff
+        color: $Black
+
+.blog-post-wrapper
+  +aProp(padding-left, 281)
+  +aProp(padding-right, 281)
+  +aProp(margin-bottom, 140)
+  +r($sm)
+    margin-bottom: 50px
+    padding: 0
+  h1
+    +aProp(margin-top, 120)
+    +r($sm)
+      margin-top: 75px
+    & + p, & + h2
+      +aProp(margin-top, 40)
+      +r($sm)
+        margin-top: 40px
+  p
+    @extend .h2
+    & + p
+      +aProp(margin-top, 24)
+      +r($sm)
+        margin-top: 24px
+    + img 
+      +aProp(margin-top, 140)
+      +r($sm)
+        margin-top: 50px
+  img + p 
+    +aProp(margin-top, 140)
+    +r($sm)
+      margin-top: 50px
+      
+

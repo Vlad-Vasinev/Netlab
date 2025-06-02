@@ -1,0 +1,30 @@
+include ../utilities/_mixins
+doctype html
+html(lang="en")
+  head
+    include _head
+    block head
+    block meta
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Netlab">
+      <meta property="og:description" content="Разработка сайтов и приложений">
+      <meta property="og:url" content="https://netlab-com.ru">
+      <meta property="og:image" content="img/og.png">
+    block jsond
+      include ./_jsond.html
+  body
+
+    //- #barba-wrapper
+    block header
+      include ../../components/nbl-header/_nbl-fixedHeader
+      include ../../components/nbl-header/_nbl-header
+    block page
+      .page
+        block content
+    block footer
+      include ../../components/footer/_footer
+
+    block scripts
+      include _scripts
+      
+    include _pages-list

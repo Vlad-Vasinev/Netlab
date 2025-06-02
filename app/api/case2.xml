@@ -1,0 +1,57 @@
+
+<div class="modal-blog-wrapper">
+  <div class="cases-profile"> 
+    <div class="cases-profile__left">
+      <div class="h7">разработка</div>
+      <div class="h7">поддержка</div>
+      <div class="h7">креативы</div>
+    </div>
+    <div class="cases-profile__right">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g clip-path="url(#clip0_5835_3754)">
+        <rect width="40" height="40" fill="url(#pattern0_5835_3754)"></rect>
+        <path d="M20.8113 15.5455H21.9562V21.8054C21.9562 22.4517 21.8039 23.0288 21.4992 23.5366C21.1976 24.0413 20.7713 24.4399 20.2204 24.7322C19.6695 25.0215 19.0232 25.1662 18.2815 25.1662C17.5398 25.1662 16.8935 25.0215 16.3426 24.7322C15.7917 24.4399 15.3639 24.0413 15.0592 23.5366C14.7576 23.0288 14.6068 22.4517 14.6068 21.8054V15.5455H15.7517V21.7131C15.7517 22.1747 15.8532 22.5856 16.0564 22.9457C16.2595 23.3027 16.5488 23.5843 16.9243 23.7905C17.3028 23.9936 17.7552 24.0952 18.2815 24.0952C18.8078 24.0952 19.2602 23.9936 19.6388 23.7905C20.0173 23.5843 20.3066 23.3027 20.5067 22.9457C20.7098 22.5856 20.8113 22.1747 20.8113 21.7131V15.5455ZM25.3874 15.5455V25H24.2425V15.5455H25.3874Z" fill="white"></path>
+        </g>
+        <defs>
+        <pattern id="pattern0_5835_3754" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_5835_3754" transform="scale(0.00833333)"></use>
+        </pattern>
+        <clipPath id="clip0_5835_3754">
+        <rect width="40" height="40" fill="white"></rect>
+        </clipPath>
+        <image id="image0_5835_3754" width="120" height="120" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAA3NCSVQICAjb4U/gAAAAIVBMVEVHcEytkVitkFitkVmnj1StkVitkFitkFisj1iylFqtkFgYEvjGAAAACnRSTlMAQ+RhEIDBoyAfAZe6ZAAAAqxJREFUaIHtm9uWqyAMhptw8PD+DzytUioKtqE5zFr1u9t7Wf4JhgQwud16cRHn6Lp/3k2YF4K8kgeYXv9yc8K1nuCSHR4qQx4Yn8Kx9QSTbhLCNG6YM2H3hGcVzkIID5GNbjIScPeHMIEvHYw474jb/0JW4b3UGZxzDRRhYBQeKMLx/XineBfc0Yc/IbkXvAag4BZ/GeAeFiJNN/1qmSUkx1T3bvBPob7xw5Lphbi6SG58Ds1ktpkussh/tnjkE6YFMkZh2lJmfMe0qWZbTcQISoyR53yUoMGBn+gx8hyEaboPfCLrGGe4ot9c0YweVaehPIna+6CxERQ3uGUyqyvXqTu4mcWMiaHFWPcu0pauh6GuK29yK4Z4aeGGLu280EMrNZtNtbhzNTKkTQDpOC/0MJSz7YN4fniBIfvYqCi7SD+VxZ1qT4pgjFvZT/E6y/cI2AqLh+gjk61z5Us5LTAfp3SVcXOMU/WvImpqhswiWqtkiJVoJVxYrBo1txsg1ZW82Q0o7D1qyk7xBa+sJ2Vlc1eCylGthtNcSFui+OmhAWoGywK7qTZzLrPlJH2tViN/djYKmdrK25sQ1R1ucXOu+JrNdiClsNVmz2p7q3syx+tGQJHrRkCNH74RMLpSXF1MZcIjVC7Lzb47yefG6ytMRlr4977CNJxLIT3WTb4+XAtQt1g+SWGj7seqHEO8AOWs9gUcjCO3foTRn5fcZPSLjJ4wZkhamSJj2KYVC5qVzjGmZprwVRD6BcSqX6uiXz6T6QXWqbDbd5wxYv4VvbD7dptceMbXvlL28T7Atx0EpAjaOi/0YNauQApkjLq7lpTDxKNcS0rZhDMWfr4ctKWacPZNRce2o0mm7SgZOeRR83Rj6wk+adheI9Ray8onpNBrptvj4t2b+9sH/wDGlpJogkGGtwAAAABJRU5ErkJggg=="></image>
+        </defs>
+      </svg>
+      <div class="h7">Dpprofile</div>
+    </div>
+  </div>
+  <div class="modal-blog-wrapper__block">
+    <div class="h3">Инновационная платформа для оптовых закупок электроники, которая устанавливает прямую связь между производителями, поставщиками и магазинами по всему миру. Наша команда разработала мобильное приложение, обеспечивающее удобство и эффективность процесса закупок на международном уровне.</div>
+    <img class="full-width-img" src="img/screenshot.jpg" alt="">
+    <video class="full-width-video" src="img/Netlab2.webm" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+  </div>
+  <div class="modal-blog-wrapper__block">
+    <img class="full-width-img" src="img/screenshot.jpg" alt="">
+    <img class="full-width-img" src="img/screenshot.jpg" alt="">
+  </div>
+  <div class="modal-blog-wrapper__block _big">
+    <img class="full-width-img" src="img/new/screen2.jpg" alt="">
+  </div>
+  <div class="modal-blog-wrapper__block">
+    <div class="case-modal-tg-banner">
+      <div class="h2">Хотите обсудить проект?</div>
+      <h3>пишите, мы на связи</h3>
+      <div class="modal-links">
+        <a class="modal-link" href="">
+          <svg width="41" height="34" viewBox="0 0 41 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M37.3292 0.434128L1.86921 14.1081C-0.550787 15.0801 -0.536787 16.4301 1.42521 17.0321L10.5292 19.8721L31.5932 6.58213C32.5892 5.97613 33.4992 6.30213 32.7512 6.96613L15.6852 22.3681H15.6812L15.6852 22.3701L15.0572 31.7541C15.9772 31.7541 16.3832 31.3321 16.8992 30.8341L21.3212 26.5341L30.5192 33.3281C32.2152 34.2621 33.4332 33.7821 33.8552 31.7581L39.8932 3.30213C40.5112 0.824129 38.9472 -0.297872 37.3292 0.434128Z" fill="white"></path>
+          </svg>
+        </a>
+        <a class="modal-link" href="">
+          <img src="img/new/dm-order.png" alt="">
+        </a>
+      </div>
+      <h4>Любой вопрос можно задать Дмитрию</h4>
+    </div>
+  </div>
+</div>

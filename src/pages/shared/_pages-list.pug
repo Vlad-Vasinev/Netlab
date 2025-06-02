@@ -1,0 +1,87 @@
+div
+  style.
+    .pl {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+
+    }
+    .pl * {
+      color: #000;
+    }
+    .pl .pl__trigger {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+    }
+    .pl .pl__ctr {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      background-color: #fff;
+      display: none;
+    }
+    .pl._v .pl__ctr {
+      display: block;
+    }
+    .pl a {
+      display: block;
+      padding: 4px 8px;
+    }
+  .pl(title='список страниц')
+    .pl__trigger
+    .pl__ctr
+      a(href='about.html')
+        | about  
+        b
+          small (about.html)
+      //- a(href='blog-post.html')
+      //-   | blog-post  
+      //-   b
+      //-     small (blog-post.html)
+      //- a(href='blog.html')
+      //-   | blog  
+      //-   b
+      //-     small (blog.html)
+      a(href='cases.html')
+        | cases  
+        b
+          small (cases.html)
+      a(href='contacts.html')
+        | contacts  
+        b
+          small (contacts.html)
+      a(href='index.html')
+        | index  
+        b
+          small (index.html)
+      //- a(href='usluga-page.html')
+      //-   | usluga-page  
+      //-   b
+      //-     small (usluga-page.html)
+      a(href='uslugi.html')
+        | uslugi  
+        b
+          small (uslugi.html)
+      a(href='portfolio.html')
+        | portfolio  
+        b
+          small (portfolio.html)
+      a(href='portfolio-sites.html')
+        | portfolio-sites  
+        b
+          small (portfolio-sites.html)
+  script.
+    (() => {
+    const pl = document.querySelector(".pl");
+    if (!pl) { return }
+    pl.querySelector('.pl__trigger').addEventListener('click', (e) => {
+      pl.classList.toggle('_v');
+    })
+    })();

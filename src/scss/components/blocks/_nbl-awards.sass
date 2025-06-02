@@ -1,0 +1,94 @@
+
+.nbl-awards 
+  overflow: hidden
+  position: relative
+  &.nbl-awards_cases          
+    .nbl-awards__block 
+      +r($sm)
+        display: flex
+        justify-content: flex-start
+    .nbl-awards__data 
+      +r($sm)
+        width: 32.8vw
+    .nbl-awards__award-el .h4:last-child
+      margin-left: 0
+    ul.nbl-awards__award
+      .h4:first-child 
+        +r($sm)
+          display: initial
+  &__block
+    border-top: 1px solid #151515
+    padding-top: aCalc(12)
+    display: grid 
+    gap: aCalc(16)
+    grid-template-columns: repeat(2, aCalc(460) aCalc(936))
+    +r($sm)
+      padding-top: 6px
+      grid-template-columns: 107px 228px
+      justify-content: space-between
+    ul 
+      position: relative
+    &
+      .nbl-awards__award-el:first-child
+        padding-top: 0 !important
+  &__data, &__award, &__title 
+    display: flex
+    flex-direction: column
+    padding: 0
+  &__award 
+    &-el 
+      border-top: 1px solid #151515
+      cursor: pointer
+      display: flex
+      align-items: center
+      padding: aCalc(12) 0
+      +r($sm)
+        padding: 6px 0
+      &:first-child
+        border-top: none
+      .h4:last-child 
+        margin-left: 30%
+        +r($sm)
+          margin-left: 0
+      .h4:first-child 
+        position: relative
+        +r($sm)
+          display: none
+        &::after
+          content: ''
+          position: absolute
+          width: 100%
+          transform: scaleX(0)
+          border-radius: aCalc(5)
+          height: 0.05em
+          bottom: 0
+          left: 0
+          background: #ffffff
+          transform-origin: bottom right
+          transition: transform 0.25s ease-out
+      &:hover 
+        .h4:first-child::after
+          transform: scaleX(1)
+          transform-origin: bottom left
+  ._mobTitle 
+    display: none 
+    +r($sm)
+      display: block
+      margin-top: 2px
+      opacity: 0.4
+
+  .awards-card
+    position: absolute
+    transform: translateX(40%)
+    top: 25%
+    width: aCalc(300)
+    height: aCalc(424)
+    border-radius: aCalc(4)
+    overflow: hidden
+    display: none
+    &._active 
+      display: block
+    img 
+      object-fit: cover
+      width: 100%
+      height: 100%

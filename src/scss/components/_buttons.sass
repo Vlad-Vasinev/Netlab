@@ -1,0 +1,181 @@
+.button
+  &_icon
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: aCalc(4)
+    +r($sm)
+      gap: 4px
+    svg
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px
+
+
+.full-slide-btn
+  cursor: pointer
+  .full-slide-btn-inner
+    position: relative
+    overflow: hidden
+    & > span
+      display: block
+      transform: translateY(0)
+      transition: transform 0.4s 0.05s, color 0.2s linear, background-color 0.2s linear
+      &:nth-child(1)
+        position: static
+      &:nth-child(2)
+        position: absolute
+        width: 100%
+  &:hover
+    +rmin($sm1)
+      .full-slide-btn-inner
+        & > span
+          transform: translateY(-100%)
+          &:nth-child(2)
+            position: absolute
+  &.full-slide-btn_horizontal
+    .full-slide-btn-inner
+      & > span
+        transform: translateX(0)
+        transition: transform 0.4s 0.05s, color 0.3s
+        &:nth-child(2)
+          top: 0
+          left: 100%
+    &:hover
+      +rmin($sm1)
+        .full-slide-btn-inner
+          & > span
+            transform: translateX(-100%)
+.button.full-slide-btn, button.full-slide-btn
+  padding: 0
+  background-color: unset
+  overflow: hidden
+  -webkit-mask-image: -webkit-radial-gradient(white, black)
+  .full-slide-btn-inner > span, > span:only-child
+    // @extend .buttonM
+    display: block
+    padding: aCalc(9) aCalc(16)
+    color: #fff
+    text-align: center
+    +r($sm)
+      padding: 9px 16px
+      border-radius: 12px
+    &:nth-child(1)
+      background-color: $Black
+    &:nth-child(2)
+      background-color: #272727
+    > *
+      color: inherit
+.slide-button
+  .slide-button-inner
+    position: relative
+    overflow: hidden
+    p
+      position: relative
+      transform: translateY(0)
+      transition: transform 0.4s 
+      &:nth-child(2)
+        position: absolute
+  &:hover
+    .slide-button-inner
+      p
+        transform: translateY(-100%)
+        &:nth-child(2)
+          position: absolute
+
+.fill-button
+  padding: 14px 15.5px
+  background: #202020
+  border-radius: 40px
+  width: fit-content
+  position: relative
+  cursor: pointer
+  overflow: hidden
+  transform: scale(1)
+  transition: background 0s 0s ease, transform .5s ease-out, color .3s
+  color: #fff
+  +r($sm)
+    padding: 14px 15.5px
+  &:before
+    left: 50%
+    top: 50%
+    right: auto
+    bottom: auto
+    //background: #fff
+    background: #fff
+    width: 150%
+    aspect-ratio: 1
+    // height: 120%
+    padding-top: 100%
+    transform: scale(0) translate(-50%,-50%)
+    transform-origin: var(--x) var(--y)
+    content: ""
+    position: absolute
+    border-radius: 50%
+    pointer-events: none
+    transition-property: transform,background-color,border-color,box-shadow,color
+    transition-duration: .6s,.8s,.8s,.8s,.4s
+    z-index: -1
+  &._horizontal:before
+    width: 150%
+  &._vertical:before
+    width: auto
+    height: 150%
+
+  &:hover
+  &:active
+    transform: scale(.97)
+    transition: transform .12s ease-out
+  +r(550)
+    width: 100%
+    padding: 16px 14px
+    text-align: center
+  &.hovered
+    transition: background-color 0.1s 0.2s, color 0.4s
+    &:before
+      +rmin($sm1)
+        transform: scale(1) translate(-50%, -50%)
+        z-index: -1    
+
+.fill-button.fill-button_white
+  color: $Black
+  background: #fff
+
+.fill-button
+  &_round
+    border-radius: 100px
+    padding: aCalc(12) aCalc(18)
+    +r($sm)
+      padding: 12px 18px
+
+
+  &_blue
+    color: $Black
+    background-color:#11E2C7
+    &::before
+      background-color:#00cbb0
+      
+  
+.bg-shrink-btn
+  position: relative
+  background-color: unset !important
+  &::before
+    background-color: #0F0F0F
+    z-index: -1
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +aProp(border-radius, 24)
+    transform: scale(1)
+    transition: transform 0.4s ease
+    +r($sm)
+      border-radius: 24px
+  &:hover 
+    
+    &:before
+      transform: scale(0.939)

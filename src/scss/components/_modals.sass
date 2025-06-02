@@ -1,0 +1,686 @@
+body
+  --scale-origin-y: 0
+  position: relative
+  .header-inner, footer, .page
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+    transform-origin: center 0
+  .page
+    transform-origin: center var(--scale-origin-y)
+  &._scaled
+    .header-inner, footer, .page
+      transform: scale(0.95)
+
+.modal.opened ~ .modal-background, .modal-background.opened
+  visibility: visible
+  opacity: 0.6
+  transition: opacity 0.4s, visibility 0s 0s
+
+[js-modal-open]
+  cursor: pointer
+
+.button.full-slide-btn
+  @extend .h4
+  padding: aCalc(9) aCalc(16)
+  width: max-content
+  background: $Black
+  color: #fff
+  +aProp(border-radius, 40)
+  @include r($sm1)
+    border-radius: 40px
+    padding: 9px 16px
+
+  &:active
+    transform: scale(0.96)
+
+.modal-background
+  width: 100%
+  top: 0
+  left: 0
+  height: 100%
+  position: fixed
+  z-index: 11
+  display: block
+
+  background: $Black
+
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.4s, visibility 0s 0.41s
+
+.modal.opened ~ .modal-background, .modal-background.opened
+  visibility: visible
+  opacity: 0.6
+  transition: opacity 0.4s, visibility 0s 0s
+  
+.modal
+  display: none
+  top: 0
+
+  height: auto
+  +aProp(width, 1118)
+  top: 48%
+  position: fixed
+  //z-index: 20
+  z-index: 101
+  opacity: 0
+  visibility: hidden
+  max-height: 95%
+  left: 50vw
+
+  transform: translate(-50%, -40%)
+  transition: opacity 0.2s, visibility 0s 0.41s, transform 0.4s
+  +r($sm)
+    width: 100%
+    top: auto
+    bottom: 0
+    min-height: 100vh
+    min-height: -webkit-fill-available
+    //height: 100vh
+    height: var(--app-height)
+    max-height: 100vh
+    opacity: 1
+    transform: translate(-50%, 100%)
+    transition: visibility 0s 0.41s, transform 0.4s
+
+  &.opened
+    opacity: 1
+    visibility: visible
+    transition: transform 0.4s 0.01s, visibility 0s 0s, opacity 0.2s 0.01s
+    transform: translate(-50%, -50%)
+    +r($sm)
+      transform: translate(-50%, 0)
+  &._inited
+    display: block
+  .modal__close-button
+    cursor: pointer
+    +rmin($sm)
+      margin-left: aCalc(75)
+
+    &:active
+      transform: scale(0.96)
+    path
+      transition: transform 0.3s
+      transform-origin: center
+    &:hover
+      path
+        transform: rotate(90deg)
+  .modal__body
+    width: 100%
+    position: relative
+
+    +r($sm)
+      height: 100%
+      // height: var(--app-height)
+      overflow-y: scroll
+      overflow-x: hidden
+      +hideScroll
+      // padding-bottom: 118px
+
+  .modal__inner
+    +aProp(border-radius, 24)
+    height: auto
+    width: 100%
+    position: relative
+    background-color: #fff
+    +aPadding(50, 60, 100, 60)
+    color: #000
+    +r($sm)
+      height: 100%
+      border-radius: 0
+      padding: 0
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+  .modal__top
+    @extend .h1
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +aProp(margin-bottom, 40)
+    +r($sm)
+      margin-bottom: 25px
+      padding-top: 8px
+    span
+      color: #000
+    svg
+      display: block
+      // width: aCalc(24)
+      width: aCalc(57)
+      height: auto
+      +r($sm)
+        width: 24px
+  .modal-blog-wrapper
+
+    p, img, video, .ul-block, .button
+      & + p, & + img, & + video, & + .ul-block
+        // +aProp(margin-top, 70)
+        +r($sm)
+          margin-top: 24px
+    .h1 + p, p + p
+      +aProp(margin-top, 24)
+      +r($sm)
+        margin-top: 16px
+    p, img, video, .ul-block, .button
+      & + .button
+        +aProp(margin-top, 40)
+        +r($sm)
+          margin-top: 24px
+
+    .modal-blog-wrapper__block
+      .full-width-img, .full-width-video
+        box-sizing: border-box
+        display: block
+        +aProp(margin-left, -60)
+        +aProp(margin-right, -60)
+        +aProp(--add-margin, 120)
+        width: calc(100% + var(--add-margin))
+        max-width: calc(100% + var(--add-margin))
+        +r($sm)
+          width: 100vw
+          max-width: 100vw
+          margin-left: -15px
+          margin-right: -15px
+    .modal-blog-wrapper__block
+      ul
+        padding-left: 0
+        margin-top: aCalc(40)
+        margin-bottom: aCalc(40)
+        display: flex
+        gap: aCalc(120)
+        +r($sm)
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          gap: 36px
+          margin-top: 36px
+          margin-bottom: 36px
+        .h3 
+          margin-top: 0
+        li 
+          p:first-child 
+            margin-bottom: aCalc(16)
+            +r($sm)
+              margin-bottom: 16px
+          p 
+            margin-bottom: aCalc(4)
+            +r($sm)
+              margin-bottom: 4px
+        +r($sm)
+          margin-bottom: 36px
+      .full-slide-btn 
+        border-radius: aCalc(60)
+        +r($sm)
+          border-radius: 60px
+      & + .modal-blog-wrapper__block
+        display: block
+        font-size: 0
+        .ul-block
+          margin-top: aCalc(0)
+        // +aProp(margin-top, 64)
+        +r($sm)
+          margin-top: 36px
+      &._big
+        height: aCalc(1295)
+        +r($sm)
+          height: 388px
+        img 
+          height: 100%
+          object-fit: cover
+      &:last-child
+        margin-top: aCalc(80)
+        +r($sm)
+          margin-top: 60px
+      & + .modal-blog-wrapper__block.no-marTop
+        margin-top: 0
+        margin-top: 0
+      .button.full-slide-btn .full-slide-btn-inner>span:nth-child(2), .button.full-slide-btn>span:only-child:nth-child(2), button.full-slide-btn .full-slide-btn-inner>span:nth-child(2), button.full-slide-btn>span:only-child:nth-child(2)
+        background-color: #080808
+    .ul-block
+      .ul-block__line::before
+        filter: invert(1)
+
+.modal.case-modal
+  .modal-links
+    display: flex
+    .modal-link
+      position: relative
+      width: aCalc(64)
+      height: aCalc(64)
+      border-radius: aCalc(96)
+      display: grid
+      justify-content: center
+      align-items: center
+      background-color: #4A9BD8
+      z-index: 2
+      +r($sm)
+        width: 72px 
+        height: 72px
+        border-radius: 96px
+      svg, img
+        width: aCalc(30)
+        height: aCalc(24)
+        +r($sm)
+          width: 36px
+          height: 36px
+      &:last-child 
+        z-index: 1
+        left: aCalc(-12)
+        background-color: transparent
+        svg, img
+          width: 100%
+          height: 100%
+          object-fit: cover
+  .cases-profile 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 aCalc(24)
+    border-top: 1px solid #3C3C3C
+    border-bottom: 1px solid #3C3C3C
+    margin-bottom: aCalc(24)
+    margin-right: aCalc(-24)
+    margin-left: aCalc(-24)
+    +r($sm)
+      padding: 0
+      margin-right: -12px
+      margin-left: -12px
+      // border-bottom: none
+      margin-bottom: 16px
+    .h7 
+      color: #484848
+      +r($sm)
+        font-size: 11px
+    &__left
+      display: flex
+      gap: aCalc(13)
+      +r($sm)
+        gap: 12px
+        padding: 9px 12px
+      .h7 
+        position: relative
+        &::after 
+          position: absolute
+          content: "/"
+          width: 1px
+          height: 100%
+          right: aCalc(-5)
+          top: 0
+          +r($sm)
+            right: -5px
+        &:last-child
+          &::after 
+            display: none
+    &__right
+      display: flex
+      align-items: center
+      padding-left: aCalc(24)
+      padding-top: aCalc(8)
+      padding-bottom: aCalc(8)
+      border-left: 1px solid #3C3C3C
+      gap: aCalc(12)
+      +r($sm)
+        padding: 9px 12px
+        gap: 8px
+      svg, img 
+        width: aCalc(40)
+        height: aCalc(40)
+        +r($sm)
+          width: 30px
+          height: 30px
+  .modal__inner
+    padding-left: 0
+    padding-right: 0
+    padding-top: 0
+  .modal__top 
+    svg 
+      width: aCalc(24)
+      +r($sm)
+        width: 24px
+  .modal__top, .modal__body
+    +aProp(padding-left, 24)
+    +aProp(padding-right, 24)
+    margin-bottom: 0
+    +r($sm)
+      padding-left: 12px
+      padding-right: 12px
+      // margin-bottom: -122px
+      //margin-bottom: 8px
+    .h3 
+      margin-bottom: aCalc(24)
+  .modal__top 
+    +r($sm)
+      padding: 16px 12px
+  +rmin($sm)
+    overflow-y: scroll
+    +hideScroll
+    +aProp(width, 1300)
+    top: 50%
+    max-height: 100%
+    // min-height: 50%
+    .modal__body
+      min-height: 50vh
+    .modal__top
+      position: sticky
+      align-items: center
+      height: aCalc(76)
+      top: -1px
+      z-index: 1
+      background-color: transparent
+      +aProp(padding-top, 22)
+      +aProp(padding-bottom, 22)
+      +aProp(padding-left, 24)
+      +aProp(padding-right, 24)
+      //backdrop-filter: blur(3px)
+      +r($sm)
+        height: unset
+        margin-bottom: 0
+        padding-bottom: 30px
+      span
+        transition: all 0.3s
+      svg 
+        cursor: pointer
+
+    .modal__inner
+      +aProp(margin-top, 40)
+      +aProp(margin-bottom, 40)
+
+    .loading-icon
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 6%
+      opacity: 1
+      svg
+        width: 100%
+    &._sticked
+      .modal__top
+        width: auto
+        background-color: #ffffff
+        +r($sm)
+          background-color: #ffffff !important
+        span
+          +aProp(font-size, 24)
+          +aProp(line-height, 32)
+
+.modal.menu-modal
+  display: flex
+  align-items: flex-end
+  .modal__inner 
+    display: flex
+    flex-direction: column
+    height: 524px
+    padding: 32px 24px 40px
+    .modal__top
+      +r($sm)
+        flex-direction: column
+        align-items: flex-start
+        padding-bottom: 0 !important
+        gap: 6px
+    .modal__body 
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    .modal__close-button 
+      position: absolute
+      top: 12px 
+      right: 12px
+    .nbl-contactBadge
+      margin-top: auto
+      flex-grow: 2
+      .nbl-contactBadge__titles
+        .h5-sm 
+          margin-bottom: 2px
+      .nbl-contactBadge__text
+        .h7-sm
+          color: #000000
+    .modal__links 
+      display: flex
+      justify-content: space-between
+      margin-bottom: 48px
+      border-top: 1px solid #EAEAEA
+      &-item 
+        padding-top: 16px
+        width: 50%
+        display: flex
+        flex-direction: column
+        gap: 16px
+        .h6 
+          color: #000000
+        svg, img 
+          width: 32px 
+          height: 32px
+        &:first-child
+          border-right: 1px solid #EAEAEA
+        &:nth-child(2)
+          padding-left: 16px
+
+.modal
+  &_mini
+    +rmin($sm)
+      width: auto
+    +r($sm)
+      min-height: unset
+      height: auto
+      top: unset
+      bottom: 0
+  &_mini &__top
+    @extend .h2
+    +rmin($sm)
+      margin-bottom: aCalc(24)
+  &_mini &__inner
+    +rmin($sm)
+      padding: aCalc(24)
+  &_mini &__body
+    +r($sm)
+      padding-bottom: 40px
+
+
+.order-site-form
+  div, span, p
+    color: #000
+  .order-site-form__block
+    & + .order-site-form__block
+      +aProp(margin-top, 60)
+      +r($sm)
+        margin-top: 40px
+    &:last-child
+      +aProp(margin-top, 88)
+      +r($sm)
+        margin-top: 88px
+    &:last-child
+      display: flex
+      justify-content: space-between
+      align-items: center
+      +r($sm)
+        flex-direction: column
+        justify-items: flex-start
+    .order-site-form__title
+      font-weight: 400
+      +aProp(font-size, 24)
+      +aProp(line-height, 32)
+      +aProp(margin-bottom, 16)
+      +r($sm)
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 16px
+    .order-site-form__project-type
+    .order-site-form__project-description
+      .ui-input
+        height: auto
+      .textarea[contenteditable]
+        height: auto
+
+      .drag-file
+        +aProp(margin-top, 24)
+        +r($sm)
+          margin-top: 10px
+
+    .order-site-form__contacts
+      display: grid
+      grid-template-columns: 1fr 1fr
+      +aProp(column-gap, 40)
+      +aProp(row-gap, 22)
+      +r($sm)
+        column-gap: 0
+        row-gap: 16px
+        grid-template-columns: 1fr
+      position: relative
+
+      .error-field
+        position: absolute
+        z-index: 1
+        +aProp(--top, 14)
+        top: calc(100% + var(--top))
+        opacity: 1
+        background-color: rgba(30, 30, 30, 0.59)
+        +aProp(border-radius, 8)
+        +aPadding(4, 8)
+        left: 50%
+        transform: translateX(-50%)
+        +r($sm)
+          top: calc(100% + 14px)
+          border-radius: 8px
+          padding: 4px 8px
+
+        &::before
+          content: ""
+          bottom: calc( 100% - 1px )
+          left: 50%
+          transform: translateX(-50%)
+          position: absolute
+          +aProp(width, 13)
+          +aProp(height, 6)
+          background-repeat: no-repeat
+          background-position: bottom
+          background-size: 100%
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 13 5'%3E%3Cpath fill='%237A7A7A' d='m0 5 3.787-3.496a4 4 0 0 1 5.426 0L13 5H0Z'/%3E%3C/svg%3E")
+          +r($sm)
+            width: 13px
+            height: 6px
+        .error-field__error
+          color: #fff
+          display: none
+          white-space: nowrap
+          &:first-child
+            display: block
+        &:empty
+          opacity: 0
+
+    .order-site-form__confirm-button
+      +r($sm)
+        width: 100%
+
+      .full-slide-btn
+        +aProp(border-radius, 40)
+        +r($sm)
+          border-radius: 40px
+
+          width: 100%
+          margin-bottom: 20px
+        .full-slide-btn-inner
+        .full-slide-btn-inner > span, > span:only-child
+          // @extend .buttonM
+
+          padding: aCalc(18) aCalc(24)
+
+          +r($sm)
+            padding: 17px 24px
+            border-radius: 12px
+          &:nth-child(1)
+            background-color: $Black
+          &:nth-child(2)
+            background-color: #272727
+    .order-site-form__policy
+      +aProp(font-size, 16)
+      +aProp(line-height, 22)
+      display: block
+      color: #9C9C9C
+      +r($sm)
+        font-size: 11px
+        line-height: 14px
+  .loading-icon
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 6%
+    height: auto
+
+  &.loading
+    pointer-events: none
+    opacity: .6
+    .loading-icon
+      display: block
+  &.hidden
+    display: none
+    & + .form-response
+      display: block
+
+.form-response
+  width: 100%
+  text-align: left
+  +aProp(font-size, 24)
+  +aProp(line-height, 32)
+  color: #000
+  display: none
+  +r($sm)
+    font-size: 24px
+    line-height: 32px
+  &.visible
+    display: block
+
+.form-switch
+  .form-switch__container
+    display: flex
+    flex-wrap: wrap
+    +aProp(gap, 4)
+    +r($sm)
+      gap: 4px
+    .form-switch__option
+      // +aPadding(9, 16)
+      +aPadding(9, 29)
+      border: 1px dashed #4D4D4D
+      +aProp(border-radius, 60)
+      background-color: #fff
+      cursor: pointer
+      transition: border .5s ease, background .15s ease
+
+      +r($sm)
+        border-radius: 60px
+        padding: 9px 25px
+      span
+        font-weight: 400
+        +aProp(font-size, 16)
+        +aProp(line-height, 22)
+        +r($sm)
+          font-size: 14px
+          line-height: 20px
+      .form-switch__option-dismiss
+        display: none
+
+        +aProp(width, 22)
+        +aProp(height, 22)
+        +r($sm)
+          width: 20px
+          height: 20px
+
+      &:active
+        transform: scale(0.98)
+      &:hover, &:focus, &.focus-visible
+        border: 1px solid $Black
+      &.active
+        display: flex
+        align-items: center
+        background-color: $Black
+        border: 1px solid $Black
+        +aPadding(9, 16)
+        +r($sm)
+          padding: 9px 13px
+        span
+          display: block
+          color: #fff
+
+        .form-switch__option-dismiss
+          display: block
+          +aProp(margin-left, 4)
+          +r($sm)
+            margin-left: 4px
+

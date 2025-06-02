@@ -1,0 +1,43 @@
+.page-container
+  .main-header-block
+    h1.flipping-text(js-show-in-viewport)
+      .flipping-text__container
+        | Our experience.
+      .flipping-text__container
+        | The latest cases and current news.
+  .blog-filter-block(js-show-in-viewport)
+    .blog-filter-block__tags-container
+      .blog-filter-block__tag(data-post-filter-tag-name='all') All
+      .blog-filter-block__tag(data-post-filter-tag-name='cases') Cases
+      .blog-filter-block__tag(data-post-filter-tag-name='all') Ux design
+      .blog-filter-block__tag(data-post-filter-tag-name='all') eCommerce
+      .blog-filter-block__tag(data-post-filter-tag-name='all') Marketing
+      .blog-filter-block__tag(data-post-filter-tag-name='all') Real estate
+  .blog-posts(js-show-in-viewport)
+    - var n = 0;
+    while n < 10
+      a.blog-posts-item(href='/blog-post' data-post-filter-tags='["all"]')
+        .blog-posts-item__cover
+          img(src="img/blogPostCover.jpg", alt="")
+        .blog-posts-item__desc
+          .blog-posts-item__title 
+            h2 Why should images<br/> touch the edges of the screen on mobile?
+          .link-button-bottom-block
+            .link-button-bottom-block__text Кейсы 
+            svg.link-button-bottom-block__button(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none' viewBox='0 0 50 50')
+              circle(cx='25' cy='25' r='25' fill='#080808') 
+              path(fill='#fff' fill-rule='evenodd' d='M32.2377 17.0077H20.3809V16H34v13.6123h-1.0082V17.6814L16.6961 33 16 32.271l16.2377-15.2633Z')
+      - n++
+    while n < 20
+      a.blog-posts-item(href='/blog-post' data-post-filter-tags='["all", "cases"]')
+        .blog-posts-item__cover
+          img(src="img/blogPostCover.jpg", alt="")
+        .blog-posts-item__desc
+          .blog-posts-item__title 
+            h2 Lorem pariatur enim adipisicing reprehenderit irure. Ea enim ipsum labore occaecat cupidatat nisi sint veniam officia.
+          .link-button-bottom-block
+            .link-button-bottom-block__text Cases 
+            svg.link-button-bottom-block__button(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='none' viewBox='0 0 50 50')
+              circle(cx='25' cy='25' r='25' fill='#080808') 
+              path(fill='#fff' fill-rule='evenodd' d='M32.2377 17.0077H20.3809V16H34v13.6123h-1.0082V17.6814L16.6961 33 16 32.271l16.2377-15.2633Z')
+      - n++

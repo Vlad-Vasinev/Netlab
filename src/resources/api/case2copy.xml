@@ -1,0 +1,77 @@
+<div class="modal-blog-wrapper">
+  <div class="modal-blog-wrapper__block">
+    <p class="h3">Инновационная платформа для оптовых закупок электроники, которая устанавливает прямую связь между производителями, поставщиками и магазинами по всему миру. Наша команда разработала мобильное приложение, обеспечивающее удобство и эффективность процесса закупок на международном уровне.</p>          <video class="full-width-video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+  </div>
+  <div class="modal-blog-wrapper__block">
+    <div class="h1">Портфолио готовых объектов</div>
+    <p class="h2">Все объекты разделены на 4 категории: «Дома», «Бани», «Для бизнеса», «Для души». В каждой категории есть сложные фильтры. Пользователь может найти подходящий объект по площади, стилю, количеству этажей или спален. </p>
+  </div>
+  <div class="modal-blog-wrapper__block">
+    <video class="full-width-video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+  </div>
+  <div class="modal-blog-wrapper__block no-marTop">
+    <video class="full-width-video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+  </div>
+  <div class="modal-blog-wrapper__block no-marTop">
+    <video class="full-width-video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+  </div>
+  <div class="modal-blog-wrapper__block no-marTop">
+    <video class="full-width-video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+  </div>
+<div class="modal-blog-wrapper__block">
+  <p class="h2">Мы создали сайт для артели «Данила, Макар и братья», которая специализируется на производстве бревенчатых домов и бань из полярной сосны Кело. Задача проекта — рассказать о деятельности артели и вызвать у пользователя желание заказать дом по авторскому проекту.</p>
+  <ul>
+    <li>
+      <p class="h5">Направления</p>
+      <p class="h3">E-commerce</p>
+      <p class="h3">Furniture</p>
+      <p class="h3">Web</p>
+    </li>
+    <li>
+      <p class="h5">Разработка</p>
+      <p class="h3">HTML / CSS</p>
+      <p class="h3">Javascript</p>
+      <p class="h3">Webpack</p>
+    </li>
+    <li>
+      <p class="h5">Дизайн</p>
+      <p class="h3">Концепция</p>
+      <p class="h3">Масштабирование</p>
+      <p class="h3">Дизайн-система</p>
+    </li>
+  </ul>
+  <button class="full-slide-btn" type="submit">
+    <div class="full-slide-btn-inner"> <span>
+        <h3>Перейти на сайт</h3></span><span>
+        <h3>Перейти на сайт</h3></span></div>
+  </button>
+</div>
+<div class="modal-blog-wrapper__block">
+              <video class="full-width-video" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted=""> </video>
+    </div>
+<div class="modal-blog-wrapper__block">
+    <div class="ul-block">
+    <div class="ul-block__title">
+      <h2>На сайте реализованы<br> следующие функции: </h2>    </div>
+    <div class="ul-block__list _no-margin"> 
+                  <div class="ul-block__line">
+                    <h3>3D-туры. Для избранных объектов мы выполнили 3D-визуализацию с помощью платформы Matterport. 3D-тур позволяет рассмотреть дом с разных ракурсов и оценить интерьер помещения.</h3>
+                  </div>
+                  <div class="ul-block__line">
+                    <h3>Каталог авторских проектов. Для каждого проекта подготовлено подробное описание с актуальными ценами, планировкой и 3D-моделями будущего дома.</h3>
+                  </div>
+                  <div class="ul-block__line">
+                    <h3>Выбор квартиры на генплане здания. Доступные квартиры отображаются на плане здания. Можно выбрать квартиру с подходящей планировкой и забронировать на сайте.</h3>
+                  </div>
+                  <div class="ul-block__line">
+                    <h3>Интеграция с Youtube-каналом. У артели есть канал на YouTube — более 85 тысяч подписчиков. Мы добавили на главную страницу сайта популярные видео и кнопку перехода на канал.</h3>
+                  </div>
+                  <div class="ul-block__line">
+                    <h3>В блоке «Клиенты» представлены знаменитые личности и компании, которые воспользовались услугами артели. Это повышает доверие посетителей к бренду.</h3>
+                  </div>
+                </div>  </div>
+  </div>
+<div class="modal-blog-wrapper__block">
+                <img class="full-width-img" src="img/screenshot.jpg" alt="">
+          </div>
+</div>

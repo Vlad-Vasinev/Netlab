@@ -1,0 +1,28 @@
+
+.icons-fixed  
+  display: flex
+  flex-direction: column
+  gap: aCalc(9)
+  position: fixed
+  z-index: 1
+  top: 50%
+  transform: translateY(-50%)
+  left: aCalc(16)
+  +r($sm)
+    display: none
+  &__item 
+    width: aCalc(48)
+    height: aCalc(48)
+    position: relative
+    overflow: hidden
+    svg, img 
+      width: 100%
+      height: 100%
+    &:hover 
+      overflow: unset
+      .nbl-clipPopup.icons
+        opacity: 1
+        transform: translateX(0) translateY(-50%)
+    +r($sm)
+      width: 32px
+      height: 32px

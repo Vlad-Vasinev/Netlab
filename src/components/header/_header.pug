@@ -1,0 +1,57 @@
+header
+  .header-inner.fixed-block
+    a.logo(href='/')
+      
+      picture.logoTop
+        source(srcset='img/newMobileLogo.svg' media='(min-width: 1024px)')
+        source(srcset='img/newMobileLogo.svg' media='(max-width: 1023px)')
+        img(src="img/NetLabCS.svg", alt="")
+      picture.logoBottom
+        source(srcset='img/headerLogoBottom2.svg' media='(min-width: 1024px)')
+        source(srcset='img/headerLogoBottom3.svg' media='(max-width: 1023px)')
+        img(src="img/headerLogoBottom3.svg", alt="")
+    a.side-button.side-button_mini-mobile(href='#')
+      p Написать<br>в Telegram
+      .side-button-icon
+        img(src="img/dmitriy.jpg", alt="")  
+    button.hamburger-mobile
+      .hamburger-inner
+    nav.header-menu
+      ul
+        li
+          a.slide-button(href='/cases') 
+            p Кейсы
+        li
+          a.slide-button(href='/about')
+            p О нас
+        li
+          a.slide-button(href='/uslugi')
+            p Услуги
+        li
+          a.slide-button(href='/contacts')
+            p Контакты
+      a.header-menu__banner(href="#") 
+        .h3 Дмитрий Максимов
+        .h4 Ответственный за ваш проект
+        .h5
+          | Написать в Telegram 
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M15.4989 2.78774L2.20144 7.91549C1.29394 8.27999 1.29919 8.78624 2.03494 9.01199L5.44894 10.077L13.3479 5.09324C13.7214 4.86599 14.0627 4.98824 13.7822 5.23724L7.38244 11.013H7.38094L7.38244 11.0137L7.14694 14.5327C7.49194 14.5327 7.64419 14.3745 7.83769 14.1877L9.49594 12.5752L12.9452 15.123C13.5812 15.4732 14.0379 15.2932 14.1962 14.5342L16.4604 3.86324C16.6922 2.93399 16.1057 2.51324 15.4989 2.78774Z" fill="white"/>
+          </svg>
+        img(src="img/dmitriy-banner.jpg", alt="")
+      address.header-menu__footer
+        a.h4(href="mailto:info@netlab.pro") info@netlab.pro
+        a.h4(href="tel:+74956416155") +7 (495) 641 61 55
+        a.h4 Москва, "Красный Октябрь", <br/>Берсеневский переулок 2, строение 1, офис 312.
+  .header-side-buttons.fixed-block
+    a.side-button.fill-button(href='#')
+      p Написать<br>в Telegram
+      .side-button-icon
+        img(src="img/dmitriy.jpg", alt="")
+    .side-button.fill-button(js-modal-open data-modal-name="siteOrder")
+      p Заказать<br>проект
+      .side-button-icon
+        svg(width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(fill-rule='evenodd' clip-rule='evenodd' d='M33.752 15H17V14H35.5V32.5H34.5V15.6685L13.3452 35.8617L12.6548 35.1383L33.752 15Z' fill='white')
+  
+

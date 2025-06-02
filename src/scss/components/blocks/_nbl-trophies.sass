@@ -1,0 +1,86 @@
+
+.nbl-trophies
+  display: flex
+  gap: aCalc(16)
+  +r($sm)
+    flex-direction: column
+    gap: 24px
+    position: relative
+    margin: 0 -16px 120px -16px
+  &__controls 
+    display: flex
+    justify-content: space-between
+    +r($sm)
+      position: absolute
+      bottom: -44px
+      align-items: center
+      width: 100%
+    &._mobile 
+      display: none
+      +r($sm)
+        display: flex
+    &-btns 
+      display: flex
+      gap: aCalc(16)
+      flex-shrink: 0
+      +r($sm)
+        justify-content: space-between
+        width: 100%
+      .swiper-button-prev, .swiper-button-next
+        width: aCalc(40)
+        height: aCalc(40)
+        margin-top: 0
+        +r($sm)
+          width: 32px 
+          height: 32px
+        &::after 
+          display: none
+      .swiper-button-prev
+        svg, img 
+          transform: rotate(180deg)
+  &__info 
+    width: aCalc(460)
+    display: flex
+    flex-direction: column
+    justify-content: space-between  
+    flex-shrink: 0
+    +r($sm)
+      width: unset
+    .h2 
+      +r($sm)
+        margin: 0 12px
+  .trophies-slider
+    position: relative
+    overflow: hidden
+    &__el.swiper-slide
+      height: aCalc(623)
+      +r($sm)
+        height: 250px
+      img 
+        border-radius: aCalc(4)
+        height: 100%
+        object-fit: cover
+        +r($sm)
+          width: 100%
+          border-radius: unset
+  .swiper-pagination, .swiper-button-next, .swiper-button-prev
+    position: unset
+  .swiper-pagination
+    width: max-content
+    +r($sm)
+      position: absolute
+      left: 0
+      right: 0
+      margin: 0 auto
+    &, span 
+      font-weight: 400
+      @include aProp(font-size, 20)
+      @include aProp(line-height, 24)
+      letter-spacing: -0.4px
+      color: #ffffff
+      +r($sm)
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: -0.32px
+      

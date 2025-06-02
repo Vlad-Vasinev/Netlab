@@ -1,0 +1,29 @@
+.project-block-static
+  padding: 0 aCalc(60)
+  +aProp(padding-top, 40)
+  border-top: 1px solid #D9D9D9
+  +aProp(margin-left, -60)
+  +aProp(margin-right, -60)
+  +aProp(--add-margin, 120)
+  width: calc(100% + var(--add-margin))
+  max-width: calc(100% + var(--add-margin))
+  +r($sm)
+    padding: 0 15px
+    padding-top: 32px
+    width: 100vw
+    max-width: 100vw
+    margin-left: -15px
+    margin-right: -15px
+  
+  .project-block-static__header
+    +aProp(margin-bottom, 70)
+    +r($sm)
+      margin-bottom: 24px
+  .project-block-static__wrapper
+    +rmin($sm1)
+      display: flex
+      justify-content: space-between
+      +aProp(gap, 100)
+  &.swiper
+    +r($sm)
+      overflow: visible
